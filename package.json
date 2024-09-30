@@ -1,5 +1,5 @@
 {
-	"name": "animotion",
+	"name": "gc-education",
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",

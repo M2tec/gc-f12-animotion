@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-	<title>Animotion</title>
+	<title>Gamechanger PPBL 2024</title>
 </svelte:head>
 
 {@render children()}

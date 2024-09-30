@@ -10,6 +10,11 @@
 @import 'tailwindcss/utilities';
 
 
+@font-face {
+	font-family: "Abstract";
+	src: url("/abstract.ttf");
+}
+
 /* reset */
 *,
 *::before,
@@ -21,15 +26,25 @@
 
 /* defaults */
 :root {
-	--r-background-color: oklch(20% 0.01 272);
-	--r-main-font: 'Manrope Variable';
+	--r-background-color: rgb(214,0,249);
+	--r-background-color: linear-gradient(90deg, rgba(214,0,249,1) 0%, rgba(3,63,209,1) 35%, rgba(104,153,255,1) 100%); 
+	--r-main-font: 'Abstract';
 	--r-main-font-size: 42px;
-	--r-main-color: oklch(98% 0.02 272);
-	--r-heading-font: 'Manrope';
+	--r-main-color: black;
+	--r-heading-font: 'Abstract';
 	--r-code-font: 'JetBrains Mono Variable';
-	--r-link-color: oklch(90.54% 0.15 194);
+	--r-link-color: darkgray;
 	--ease: linear(0 0%, 0.0036 9.62%, 0.0185 16.66%, 0.0489 23.03%, 0.0962 28.86%, 0.1705 34.93%, 0.269 40.66%, 0.3867 45.89%, 0.5833 52.95%, 0.683 57.05%, 0.7829 62.14%, 0.8621 67.46%, 0.8991 70.68%, 0.9299 74.03%, 0.9545 77.52%, 0.9735 81.21%, 0.9865 85%, 0.9949 89.15%, 1 100%);
 }
+
+body {
+	background: linear-gradient(45deg, rgba(214,0,249,1) 0%, rgba(3,63,209,1) 35%, rgba(104,153,255,1) 100%); 
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 100%;
+	margin: 0;
+	padding: 2rem;
+  }
 
 /* code block */
 div:has(> pre) {
@@ -42,6 +57,21 @@ div:has(> pre) {
 /* view transitions */
 html {
 	view-transition-name: none;
+}
+
+.text-3xl {
+	text-shadow: 3px 3px 12px black;
+}
+
+.text-lg {
+	text-shadow: 3px 3px 12px black;
+}
+
+.text-base {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size:xx-large;
+	color: white;
+	text-shadow: 1px 1px 4px black;
 }
 
 ::view-transition-group(*) {
