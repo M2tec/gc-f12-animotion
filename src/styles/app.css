@@ -15,6 +15,12 @@
 	src: url("/abstract.ttf");
 }
 
+@font-face {
+	font-family: "Gothic";
+	src: url("/urw-gothic-demi-olique.ttf");
+}
+
+
 /* reset */
 *,
 *::before,
@@ -38,7 +44,7 @@
 }
 
 body {
-	background: linear-gradient(45deg, rgba(214,0,249,1) 0%, rgba(3,63,209,1) 35%, rgba(104,153,255,1) 100%); 
+	background: radial-gradient(circle, rgba(77,81,100,1) 0%, rgba(30,30,38,1) 100%);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	height: 100%;
@@ -59,18 +65,31 @@ html {
 	view-transition-name: none;
 }
 
+
 .text-3xl {
-	text-shadow: 3px 3px 12px black;
+	/* text-shadow: 3px 3px 12px black; */
+	/* 
+	background-clip: text;
+	-webkit-text-fill-color: transparent; */
+	min-height: 50px;
+	padding-top:10px;
+	background: linear-gradient(90deg, rgba(94,158,238,1) 0%, rgba(99,94,214,1) 100%);
+    color: transparent;
+    background-clip: text;
 }
 
 .text-lg {
-	text-shadow: 3px 3px 12px black;
+	min-height: 50px;
+	padding-top:10px;
+	background: linear-gradient(90deg, rgba(94,158,238,1) 0%, rgba(99,94,214,1) 100%);
+    color: transparent;
+    background-clip: text;
 }
 
 .text-base {
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-family: 'Gothic';
 	font-size:xx-large;
-	color: white;
+	color: #5e9eee;
 	text-shadow: 1px 1px 4px black;
 }
 

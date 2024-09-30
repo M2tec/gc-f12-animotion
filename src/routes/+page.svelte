@@ -7,6 +7,10 @@
 	let circle = tween({ x: 0, y: 80, r: 80, fill: '#00ffff' })
 	let items = $state([1, 2, 3, 4])
 	let layout = $state('flex gap-4')
+
+	import Arch from "$lib/assets/Gamechanger_Architecture.svg"
+	import Transparancy from "$lib/assets/Transparancy.svg"
+	import Decentralization from "$lib/assets/Decentralization.svg"
 </script>
 
 <Presentation options={{ history: true, transition: 'slide', controls: false, progress: true }}>
@@ -17,8 +21,7 @@
 				await code.update``
 			}}
 		>
-		<p bind:this={text} class="text-3xl drop-shadow-xl">Welcome!</p>
-		<p>&zwnj; </p>
+			<p bind:this={text} class="text-3xl drop-shadow-xl">Welcome!</p>
 		</Transition>
 
 		<Transition
@@ -27,10 +30,9 @@
 				await code.update``
 			}}
 		>
-		<p bind:this={text} class="text-3xl font-bold drop-shadow-sm">Game</p>
-		<p bind:this={text} class="text-lg font-bold drop-shadow-sm">changer</p>
+			<p bind:this={text} class="text-3xl font-bold drop-shadow-sm">Game</p>
+			<p bind:this={text} class="text-lg font-bold drop-shadow-sm">changer</p>
 		</Transition>
-
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
@@ -40,8 +42,8 @@
 				await code.update``
 			}}
 		>
-		<p bind:this={text} class="text-3xl font-bold drop-shadow-sm">Module 1</p>
-		<p>&zwnj; </p>
+			<p bind:this={text} class="text-3xl font-bold drop-shadow-sm">Module 1</p>
+			<p>&zwnj;</p>
 		</Transition>
 
 		<Transition
@@ -50,9 +52,8 @@
 				await code.update``
 			}}
 		>
-		<p bind:this={text} class="text-3xl font-bold drop-shadow-sm">Introduction</p>
+			<p bind:this={text} class="text-base font-bold drop-shadow-sm">Introduction</p>
 		</Transition>
-
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
@@ -62,8 +63,8 @@
 				await code.update``
 			}}
 		>
-		<p bind:this={text} class="text-3xl font-bold drop-shadow-sm">STL's</p>
-		<p>&zwnj; </p>
+			<p bind:this={text} class="text-3xl font-bold drop-shadow-sm">STL's</p>
+			<p>&zwnj;</p>
 		</Transition>
 
 		<Transition
@@ -72,36 +73,43 @@
 				await code.update``
 			}}
 		>
-		<p bind:this={text} class="text-base font-bold drop-shadow-sm pb-5">101.1: I understand why Gamechanger was built </p>
+			<p bind:this={text} class="pb-5 text-base font-bold drop-shadow-sm">
+				101.1: I understand why Gamechanger was built
+			</p>
 		</Transition>
 
 		<Transition
-		do={async () => {
-			text.classList.replace('text-6xl', 'text-8xl')
-			await code.update``
-		}}
-	>
-	<p bind:this={text} class="text-base font-bold drop-shadow-sm pb-5">101.2: I can find the GC playground</p>
-	</Transition>
-
-	<Transition
 			do={async () => {
 				text.classList.replace('text-6xl', 'text-8xl')
 				await code.update``
 			}}
 		>
-		<p bind:this={text} class="text-base font-bold drop-shadow-sm pb-5">101.3: I can write a basic GC script</p>
+			<p bind:this={text} class="pb-5 text-base font-bold drop-shadow-sm">
+				101.2: I can find the GC playground
+			</p>
 		</Transition>
 
 		<Transition
-		do={async () => {
-			text.classList.replace('text-6xl', 'text-8xl')
-			await code.update``
-		}}
-	>
-	<p bind:this={text} class="text-base font-bold drop-shadow-sm pb-5">Assignment 101: Go find GC script in a production dApp</p>
-	</Transition>
+			do={async () => {
+				text.classList.replace('text-6xl', 'text-8xl')
+				await code.update``
+			}}
+		>
+			<p bind:this={text} class="pb-5 text-base font-bold drop-shadow-sm">
+				101.3: I can write a basic GC script
+			</p>
+		</Transition>
 
+		<Transition
+			do={async () => {
+				text.classList.replace('text-6xl', 'text-8xl')
+				await code.update``
+			}}
+		>
+			<p bind:this={text} class="pb-5 text-base font-bold drop-shadow-sm">
+				Assignment 101: Go find GC script in a production dApp
+			</p>
+		</Transition>
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
@@ -111,8 +119,8 @@
 				await code.update``
 			}}
 		>
-		<p bind:this={text} class="text-3xl font-bold drop-shadow-sm">101.1</p>
-		<p>&zwnj; </p>
+			<p bind:this={text} class="text-3xl font-bold drop-shadow-sm">101.1</p>
+			<p>&zwnj;</p>
 		</Transition>
 
 		<Transition
@@ -121,7 +129,7 @@
 				await code.update``
 			}}
 		>
-		<p bind:this={text} class="text-lg font-bold drop-shadow-sm pb-5">The Gamechanger way </p>
+			<p bind:this={text} class="pb-5 text-lg font-bold drop-shadow-sm">The Gamechanger way</p>
 		</Transition>
 
 		<Transition
@@ -130,35 +138,76 @@
 				await code.update``
 			}}
 		>
-		<p bind:this={text} class="text-base font-bold drop-shadow-sm pb-5">Interoperablity</p>
+			<p bind:this={text} class="pb-5 text-base font-bold drop-shadow-sm">• Interoperablity</p>
 		</Transition>
 
 		<Transition
-		do={async () => {
-			text.classList.replace('text-6xl', 'text-8xl')
-			await code.update``
-		}}
-	>
-	<p bind:this={text} class="text-base font-bold drop-shadow-sm pb-5">Transparancy</p>
-	</Transition>
+			do={async () => {
+				text.classList.replace('text-6xl', 'text-8xl')
+				await code.update``
+			}}
+		>
+			<p bind:this={text} class="pb-5 text-base font-bold drop-shadow-sm">• Transparancy</p>
+		</Transition>
 
-	<Transition
-	do={async () => {
-		text.classList.replace('text-6xl', 'text-8xl')
-		await code.update``
-	}}
->
-<p bind:this={text} class="text-base font-bold drop-shadow-sm pb-5">Decentralization</p>
-</Transition>
+		<Transition
+			do={async () => {
+				text.classList.replace('text-6xl', 'text-8xl')
+				await code.update``
+			}}
+		>
+			<p bind:this={text} class="pb-5 text-base font-bold drop-shadow-sm">• Decentralization</p>
+		</Transition>
 
-<Transition
-do={async () => {
-	text.classList.replace('text-6xl', 'text-8xl')
-	await code.update``
-}}
->
-<p bind:this={text} class="text-base font-bold drop-shadow-sm pb-5">Security</p>
-</Transition>
+		<Transition
+			do={async () => {
+				text.classList.replace('text-6xl', 'text-8xl')
+				await code.update``
+			}}
+		>
+			<p bind:this={text} class="pb-5 text-base font-bold drop-shadow-sm">• Security</p>
+		</Transition>
 	</Slide>
 
+	<Slide class="h-full place-content-center place-items-center">
+		<Transition
+			do={async () => {
+				text.classList.replace('text-6xl', 'text-8xl')
+				await code.update``
+			}}
+		>
+		<p bind:this={text} class="pb-5 text-base font-bold drop-shadow-sm">GC Architecture </p>
+		<img style="height: 600px;" src={Arch} alt="Gamechanger Architecture"/>
+		</Transition>
+		
+	</Slide>	
+
+
+	<Slide class="h-full place-content-center place-items-center">
+		<Transition
+			do={async () => {
+				text.classList.replace('text-6xl', 'text-8xl')
+				await code.update``
+			}}
+		>
+		<p bind:this={text} class="pb-5 text-base font-bold drop-shadow-sm">• Transparancy</p>
+		<p bind:this={text} class="pb-5 text-base font-bold drop-shadow-sm">• Security</p>
+		<img style="height: 600px;" src={Transparancy} alt="Gamechanger Architecture"/>
+		</Transition>
+		
+	</Slide>		
+
+	<Slide class="h-full place-content-center place-items-center">
+		<Transition
+			do={async () => {
+				text.classList.replace('text-6xl', 'text-8xl')
+				await code.update``
+			}}
+		>
+		<p bind:this={text} class="pb-5 text-base font-bold drop-shadow-sm">• Decentralization</p>
+		<p bind:this={text} class="pb-5 text-base font-bold drop-shadow-sm">• Interoperablity</p>
+		<img style="height: 600px;" src={Decentralization} alt="Gamechanger Architecture"/>
+		</Transition>
+		
+	</Slide>	
 </Presentation>
