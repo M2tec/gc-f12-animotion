@@ -22,7 +22,9 @@
 		<Transition>
 			<p bind:this={text} class="text-3xl drop-shadow-xl">Welcome!</p>
 		</Transition>
+	</Slide>
 
+	<Slide class="h-full place-content-center place-items-center">
 		<Transition>
 			<p bind:this={text} class="text-3xl font-bold drop-shadow-sm">Game</p>
 			<p bind:this={text} class="text-lg font-bold drop-shadow-sm">changer</p>
@@ -38,7 +40,7 @@
 		<Transition>
 			<p bind:this={text} class="text-base font-bold drop-shadow-sm">Introduction</p>
 		</Transition>
-	</Slide>
+	</Slide> 
 
 	<Slide class="h-full place-content-center place-items-center">
 		<Transition>
@@ -145,14 +147,14 @@
 		<Transition>
 			<p bind:this={text} class="pb-5 text-lg font-bold drop-shadow-sm">GC script basics</p>
 		</Transition>
-	</Slide>
+	</Slide> 
 
 	<Slide class="h-full place-content-center place-items-center">
 		<Transition>
 			<Code
 				bind:this={code}
 				lang="json"
-				theme="poimandres"
+				theme="github-dark"
 				code={`{
 						"type": "script",
 						"title": "Pay me 1 tADA",
