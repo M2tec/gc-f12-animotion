@@ -13,8 +13,6 @@
 	import Transparancy from '$lib/assets/Transparancy.svg'
 	import Decentralization from '$lib/assets/Decentralization.svg'
 	import Playground from '$lib/assets/Playground.webp'
-
-	let code2: Code
 </script>
 
 <Presentation options={{ history: true, transition: 'slide', controls: false, progress: true }}>
@@ -24,7 +22,7 @@
 		</Transition>
 	</Slide>
 
-	<Slide class="h-full place-content-center place-items-center">
+	<!-- <Slide class="h-full place-content-center place-items-center">
 		<Transition>
 			<p bind:this={text} class="text-3xl font-bold drop-shadow-sm">Game</p>
 			<p bind:this={text} class="text-lg font-bold drop-shadow-sm">changer</p>
@@ -147,10 +145,10 @@
 		<Transition>
 			<p bind:this={text} class="pb-5 text-lg font-bold drop-shadow-sm">GC script basics</p>
 		</Transition>
-	</Slide> 
+	</Slide>  -->
 
 	<Slide class="h-full place-content-center place-items-center">
-		<Transition>
+		<div>
 			<Code
 				bind:this={code}
 				lang="json"
@@ -165,6 +163,110 @@
 			<Action do={() => code.selectLines`2`} />
 			<Action do={() => code.selectLines`3`} />
 			<Action do={() => code.selectLines`4-5`} />
-		</Transition>
+
+			<Action
+				do={() =>
+					code.update`
+			{
+				"type": "script",
+				"title": "Pay me 1 tADA",
+				"run": {
+					"build_1": {...
+					},
+					"sign_2": {...
+					},
+					"submit_3": {...
+					}
+				}
+			}`}
+			/>
+
+			<Action
+				do={() =>
+					code.update`
+			{
+				"type": "script",
+				"title": "Pay me 1 tADA",
+				"run": {
+					"build_1": {
+					"type": "buildTx",
+					"name": "TX-1",
+					"tx": {
+						"outputs": [{
+							"address": "addr_test1qrl07u9ssdtd......2ftdp2f6rqvz02jw",
+							"assets": [{
+										"policyId": "ada",
+										"assetName": "ada",
+										"quantity": "1000000"
+							}]
+						}]
+					}
+				},
+				"sign_2": {...
+				},
+				"submit_3": {...
+				}
+				}
+			}`}
+			/>
+
+			<Action
+				do={() =>
+					code.update`{
+			"type": "script",
+			"title": "Pay me 1 tADA",
+			"run": {...
+				"build_1": {...
+				},
+				"sign_2": {
+							"type": "signTxs",
+							"txs": [
+								"{get('cache.build_1.txHex')}"
+							]
+				},
+				"submit_3": {...
+				}
+				}
+			}`}
+			/>
+
+			<Action
+				do={() =>
+					code.update`{
+			"type": "script",
+			"title": "Pay me 1 tADA",
+			"run": {
+				"build_1": {...
+				},
+				"sign_2": {
+							"type": "signTxs",
+							"txs": [
+								"{get('cache.build_1.txHex')}"
+							]
+				},
+				"submit_3": {...
+				}
+				}
+			}`}
+			/>
+
+			<Action
+				do={() =>
+					code.update`{
+			"type": "script",
+			"title": "Pay me 1 tADA",
+			"run": {...
+				"build_1": {...
+				},
+				"sign_2": {...
+				},
+				"submit_3": {
+					"type": "submitTxs",
+            		"txs": "{get('cache.sign_2')}"
+				}
+				}
+			}`}
+			/>			
+		</div>
 	</Slide>
 </Presentation>

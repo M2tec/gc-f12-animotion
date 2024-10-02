@@ -1,0 +1,35 @@
+{
+    "type": "script",
+    "title": "Pay me 1 tADA",
+    "description": "This is a payment request.",
+    "run": {
+        "build_1": {
+            "type": "buildTx",
+            "name": "TX-1",
+            "tx": {
+                "outputs": [
+                    {
+                        "address": "addr_test1qrl07u9ssdtdwtzhrt0zrrr79yejxhfvmsmjt9jxqyaz0ktp6ydulqht6r9z4ld0jms3a3c7gw45u32vhc2ftdp2f6rqvz02jw",
+                        "assets": [
+                            {
+                                "policyId": "ada",
+                                "assetName": "ada",
+                                "quantity": "1000000"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "sign_2": {
+            "type": "signTxs",
+            "txs": [
+                "{get('cache.build_1.txHex')}"
+            ]
+        },
+        "submit_3": {
+            "type": "submitTxs",
+            "txs": "{get('cache.sign_2')}"
+        }
+    }
+}
