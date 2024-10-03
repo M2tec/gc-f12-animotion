@@ -22,7 +22,7 @@
 		</Transition>
 	</Slide>
 
-	<!-- <Slide class="h-full place-content-center place-items-center">
+	<Slide class="h-full place-content-center place-items-center">
 		<Transition>
 			<p bind:this={text} class="text-3xl font-bold drop-shadow-sm">Game</p>
 			<p bind:this={text} class="text-lg font-bold drop-shadow-sm">changer</p>
@@ -101,7 +101,7 @@
 	<Slide class="h-full place-content-center place-items-center">
 		<Transition>
 			<p bind:this={text} class="pb-5 text-base font-bold drop-shadow-sm">GC Architecture</p>
-			<img style="height: 600px;" src={Arch} alt="Gamechanger Architecture" />
+			<img style="height: 900px;" src={Arch} alt="Gamechanger Architecture" />
 		</Transition>
 	</Slide>
 
@@ -109,7 +109,7 @@
 		<Transition>
 			<p bind:this={text} class="pb-5 text-base font-bold drop-shadow-sm">• Transparancy</p>
 			<p bind:this={text} class="pb-5 text-base font-bold drop-shadow-sm">• Security</p>
-			<img style="height: 600px;" src={Transparancy} alt="Gamechanger Architecture" />
+			<img style="height: 900px;" src={Transparancy} alt="Gamechanger Architecture" />
 		</Transition>
 	</Slide>
 
@@ -117,7 +117,7 @@
 		<Transition>
 			<p bind:this={text} class="pb-5 text-base font-bold drop-shadow-sm">• Decentralization</p>
 			<p bind:this={text} class="pb-5 text-base font-bold drop-shadow-sm">• Interoperablity</p>
-			<img style="height: 600px;" src={Decentralization} alt="Gamechanger Architecture" />
+			<img style="height: 900px;" src={Decentralization} alt="Gamechanger Architecture" />
 		</Transition>
 	</Slide>
 
@@ -133,7 +133,7 @@
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
-		<Transition><img style="height: 600px;" src={Playground} alt="GC Playground" /></Transition>
+		<Transition><img style="height: 900px;" src={Playground} alt="GC Playground" /></Transition>
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
@@ -145,7 +145,7 @@
 		<Transition>
 			<p bind:this={text} class="pb-5 text-lg font-bold drop-shadow-sm">GC script basics</p>
 		</Transition>
-	</Slide>  -->
+	</Slide> 
 
 	<Slide class="h-full place-content-center place-items-center">
 		<div>
@@ -153,12 +153,13 @@
 				bind:this={code}
 				lang="json"
 				theme="github-dark"
-				code={`{
-						"type": "script",
-						"title": "Pay me 1 tADA",
-						"run": {...
-						}
-					}`}
+				code={`
+			{
+				"type": "script",
+				"title": "Pay me 1 tADA",
+				"run": {...
+				}
+			}`}
 			/>
 			<Action do={() => code.selectLines`2`} />
 			<Action do={() => code.selectLines`3`} />
@@ -195,9 +196,9 @@
 						"outputs": [{
 							"address": "addr_test1qrl07u9ssdtd......2ftdp2f6rqvz02jw",
 							"assets": [{
-										"policyId": "ada",
-										"assetName": "ada",
-										"quantity": "1000000"
+								"policyId": "ada",
+								"assetName": "ada",
+								"quantity": "1000000"
 							}]
 						}]
 					}
@@ -212,58 +213,40 @@
 
 			<Action
 				do={() =>
-					code.update`{
-			"type": "script",
-			"title": "Pay me 1 tADA",
-			"run": {...
-				"build_1": {...
-				},
-				"sign_2": {
-							"type": "signTxs",
-							"txs": [
-								"{get('cache.build_1.txHex')}"
-							]
-				},
-				"submit_3": {...
-				}
-				}
-			}`}
-			/>
-
-			<Action
-				do={() =>
-					code.update`{
-			"type": "script",
-			"title": "Pay me 1 tADA",
-			"run": {
-				"build_1": {...
-				},
-				"sign_2": {
-							"type": "signTxs",
-							"txs": [
-								"{get('cache.build_1.txHex')}"
-							]
-				},
-				"submit_3": {...
-				}
+					code.update`
+			{
+				"type": "script",
+				"title": "Pay me 1 tADA",
+				"run": {...
+					"build_1": {...
+					},
+					"sign_2": {
+						"type": "signTxs",
+						"txs": [
+							"{get('cache.build_1.txHex')}"
+						]
+					},
+					"submit_3": {...
+					}
 				}
 			}`}
 			/>
 
 			<Action
 				do={() =>
-					code.update`{
-			"type": "script",
-			"title": "Pay me 1 tADA",
-			"run": {...
-				"build_1": {...
-				},
-				"sign_2": {...
-				},
-				"submit_3": {
-					"type": "submitTxs",
-            		"txs": "{get('cache.sign_2')}"
-				}
+					code.update`
+			{
+				"type": "script",
+				"title": "Pay me 1 tADA",
+				"run": {...
+					"build_1": {...
+					},
+					"sign_2": {...
+					},
+					"submit_3": {
+						"type": "submitTxs",
+            			"txs": "{get('cache.sign_2')}"
+					}
 				}
 			}`}
 			/>			
