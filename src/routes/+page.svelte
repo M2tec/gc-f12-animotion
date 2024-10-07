@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { Presentation, Slide, Code, Transition, Action } from '@animotion/core'
 	import { tween } from '@animotion/motion'
-	import Layout from './layout.svelte'
 
 	let text: HTMLParagraphElement
 	let code: Code
@@ -153,14 +152,20 @@
 				bind:this={code}
 				lang="json"
 				theme="github-dark"
-				code={`
+				code={``}
+			/>
+
+			<Action
+			do={() =>
+				code.update`
 			{
 				"type": "script",
 				"title": "Pay me 1 tADA",
 				"run": {...
 				}
 			}`}
-			/>
+		/>
+
 			<Action do={() => code.selectLines`2`} />
 			<Action do={() => code.selectLines`3`} />
 			<Action do={() => code.selectLines`4-5`} />
@@ -181,6 +186,8 @@
 				}
 			}`}
 			/>
+
+			<Action do={() => code.selectLines`0`} />
 
 			<Action
 				do={() =>
@@ -217,6 +224,23 @@
 			{
 				"type": "script",
 				"title": "Pay me 1 tADA",
+				"run": {
+					"build_1": {...
+					},
+					"sign_2": {...
+					},
+					"submit_3": {...
+					}
+				}
+			}`}
+			/>
+
+			<Action
+				do={() =>
+					code.update`
+			{
+				"type": "script",
+				"title": "Pay me 1 tADA",
 				"run": {...
 					"build_1": {...
 					},
@@ -225,6 +249,23 @@
 						"txs": [
 							"{get('cache.build_1.txHex')}"
 						]
+					},
+					"submit_3": {...
+					}
+				}
+			}`}
+			/>
+
+			<Action
+			do={() =>
+				code.update`
+			{
+				"type": "script",
+				"title": "Pay me 1 tADA",
+				"run": {
+					"build_1": {...
+					},
+					"sign_2": {...
 					},
 					"submit_3": {...
 					}
