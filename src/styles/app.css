@@ -78,6 +78,7 @@ html {
 	-webkit-text-fill-color: transparent; */
 	min-height: 50px;
 	padding-top:10px;
+	padding-bottom: 5px;
 	background: linear-gradient(90deg, rgba(94,158,238,1) 0%, rgba(99,94,214,1) 100%);
     color: transparent;
     background-clip: text;
@@ -86,6 +87,7 @@ html {
 .text-lg {
 	min-height: 50px;
 	padding-top:10px;
+	padding-bottom: 5px;
 	background: linear-gradient(90deg, rgba(94,158,238,1) 0%, rgba(99,94,214,1) 100%);
     color: transparent;
     background-clip: text;
