@@ -11,7 +11,8 @@
 	import Arch from '$lib/assets/Gamechanger_Architecture.svg'
 	import Transparancy from '$lib/assets/Transparancy.svg'
 	import Decentralization from '$lib/assets/Decentralization.svg'
-	import Playground from '$lib/assets/Playground.webp'
+	import Playground_1 from '$lib/assets/playground_1.webp'
+	import Playground_2 from '$lib/assets/playground_2.webp'
 </script>
 
 <Presentation options={{ history: true, transition: 'slide', controls: false, progress: true }}>
@@ -22,17 +23,13 @@
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
-		<Transition>
 			<p bind:this={text} class="text-3xl font-bold drop-shadow-sm">Game</p>
 			<p bind:this={text} class="text-lg font-bold drop-shadow-sm">changer</p>
-		</Transition>
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
-		<Transition>
-			<p bind:this={text} class="text-3xl font-bold drop-shadow-sm">Module 1</p>
+			<p bind:this={text} class="text-3xl font-bold drop-shadow-sm">Module 102</p>
 			<p>&zwnj;</p>
-		</Transition>
 
 		<Transition>
 			<p bind:this={text} class="text-base font-bold drop-shadow-sm">Introduction</p>
@@ -40,84 +37,49 @@
 	</Slide> 
 
 	<Slide class="h-full place-content-center place-items-center">
-		<Transition>
 			<p bind:this={text} class="text-3xl font-bold drop-shadow-sm">STL's</p>
 			<p>&zwnj;</p>
-		</Transition>
 
 		<Transition>
 			<p bind:this={text} class="pb-5 text-base font-bold drop-shadow-sm">
-				101.1: I understand why Gamechanger was built
+				102.1 I can send a transaction using a  GC script
 			</p>
 		</Transition>
 
 		<Transition>
 			<p bind:this={text} class="pb-5 text-base font-bold drop-shadow-sm">
-				101.2: I can find the GC playground
+				102.2 I can analyze what is going on during a GC transaction
 			</p>
 		</Transition>
 
 		<Transition>
 			<p bind:this={text} class="pb-5 text-base font-bold drop-shadow-sm">
-				101.3: I can write a basic GC script
+				102.4 I am able to run my own scripts using GC lib
 			</p>
 		</Transition>
 
 		<Transition>
 			<p bind:this={text} class="pb-5 text-base font-bold drop-shadow-sm">
-				Assignment 101: Go find GC script in a production dApp
+				Assignment 102: Fork and hack payments.m2tec.nl
 			</p>
 		</Transition>
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
-		<Transition>
-			<p bind:this={text} class="text-3xl font-bold drop-shadow-sm">101.1</p>
+			<p bind:this={text} class="text-3xl font-bold drop-shadow-sm">102.1</p>
 			<p>&zwnj;</p>
-		</Transition>
 
 		<Transition>
-			<p bind:this={text} class="pb-5 text-lg font-bold drop-shadow-sm">The Gamechanger way</p>
-		</Transition>
-
-		<Transition>
-			<p bind:this={text} class="pb-5 text-base font-bold drop-shadow-sm">• Interoperablity</p>
-		</Transition>
-
-		<Transition>
-			<p bind:this={text} class="pb-5 text-base font-bold drop-shadow-sm">• Transparancy</p>
-		</Transition>
-
-		<Transition>
-			<p bind:this={text} class="pb-5 text-base font-bold drop-shadow-sm">• Decentralization</p>
-		</Transition>
-
-		<Transition>
-			<p bind:this={text} class="pb-5 text-base font-bold drop-shadow-sm">• Security</p>
+			<p bind:this={text} class="pb-5 text-lg font-bold drop-shadow-sm">Sending transactions</p>
 		</Transition>
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
-		<Transition>
-			<p bind:this={text} class="pb-5 text-base font-bold drop-shadow-sm">GC Architecture</p>
-			<img style="height: 900px;" src={Arch} alt="Gamechanger Architecture" />
-		</Transition>
+		<img style="height: 900px;" src={Playground_1} alt="GC Playground" />
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
-		<Transition>
-			<p bind:this={text} class="pb-5 text-base font-bold drop-shadow-sm">• Transparancy</p>
-			<p bind:this={text} class="pb-5 text-base font-bold drop-shadow-sm">• Security</p>
-			<img style="height: 900px;" src={Transparancy} alt="Gamechanger Architecture" />
-		</Transition>
-	</Slide>
-
-	<Slide class="h-full place-content-center place-items-center">
-		<Transition>
-			<p bind:this={text} class="pb-5 text-base font-bold drop-shadow-sm">• Decentralization</p>
-			<p bind:this={text} class="pb-5 text-base font-bold drop-shadow-sm">• Interoperablity</p>
-			<img style="height: 900px;" src={Decentralization} alt="Gamechanger Architecture" />
-		</Transition>
+		<img style="height: 900px;" src={Playground_2} alt="GC Playground" />
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
@@ -129,10 +91,6 @@
 		<Transition>
 			<p bind:this={text} class="pb-5 text-lg font-bold drop-shadow-sm">Playground</p>
 		</Transition>
-	</Slide>
-
-	<Slide class="h-full place-content-center place-items-center">
-		<Transition><img style="height: 900px;" src={Playground} alt="GC Playground" /></Transition>
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
