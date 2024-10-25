@@ -7,31 +7,35 @@
 	let image: HTMLImageElement
 	let image2: HTMLImageElement
 
+	let code2: Code
+	let code3: Code
+
+	let code4: Code
+	let code5: Code
 	import Playground_1 from '$lib/assets/playground_1.webp'
 </script>
 
 <Presentation options={{ history: true, transition: 'slide', controls: false, progress: true }}>
 	<!-- <Slide class="h-full place-content-center place-items-center">
 		<Transition>
-			<p bind:this={text} class="text-3xl drop-shadow-xl">Welcome!</p>
+			<p class="text-3xl drop-shadow-xl">Welcome!</p>
 		</Transition>
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
-			<p bind:this={text} class="text-3xl font-bold drop-shadow-sm">Game</p>
-			<p bind:this={text} class="text-lg font-bold drop-shadow-sm">changer</p>
+			<p class="text-3xl font-bold drop-shadow-sm">Game</p>
+			<p class="text-lg font-bold drop-shadow-sm">changer</p>
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
-			<p bind:this={text} class="text-3xl font-bold drop-shadow-sm">Module 102</p>
+			<p class="text-3xl font-bold drop-shadow-sm">Module 102</p>
 			<p>&zwnj;</p>
 
 		<Transition>
-			<p bind:this={text} class="text-base font-bold drop-shadow-sm">Introduction</p>
+			<p class="text-base font-bold drop-shadow-sm">Introduction</p>
 		</Transition>
 	</Slide> 
--->
-	<!-- 
+	
 	<Slide class="h-full place-content-center place-items-center">
 			<p class="text-3xl font-bold drop-shadow-sm">STL's</p>
 			<p>&zwnj;</p>
@@ -58,8 +62,8 @@
 				Assignment 102: Fork and hack payments.m2tec.nl
 			</p>
 		</Transition>
-	</Slide>  -->
-	<!-- 
+	</Slide> 
+
 	<Slide class="h-full place-content-center place-items-center">
 		<p class="text-3xl font-bold drop-shadow-sm">102.1</p>
 		<p>&zwnj;</p>
@@ -80,7 +84,17 @@
 		<Transition do={() => (image.src = '/src/lib/assets/playground_8.webp')}></Transition>
 	</Slide>
 
--->
+	<Slide class="h-full place-content-center place-items-center">
+
+			<p class="text-3xl font-bold drop-shadow-sm">102.2</p>
+			<p>&zwnj;</p>
+
+
+		<Transition>
+			<p class="pb-5 text-lg font-bold drop-shadow-sm">Under the hood</p>
+		</Transition>
+	</Slide>
+
 	<Slide class="h-full place-content-center place-items-center">
 		<div class="flex flex-row">
 			<div id="code">
@@ -196,159 +210,170 @@
 
 		<Action do={() => (image2.src = '/src/lib/assets/advanced_8a.webp')} />	
 
-	</Slide>
-
-	<Slide class="h-full place-content-center place-items-center">
-		<Transition>
-			<p bind:this={text} class="text-3xl font-bold drop-shadow-sm">101.2</p>
-			<p>&zwnj;</p>
-		</Transition>
-
-		<Transition>
-			<p bind:this={text} class="pb-5 text-lg font-bold drop-shadow-sm">Playground</p>
-		</Transition>
-	</Slide>
-	<!-- 
-	<Slide class="h-full place-content-center place-items-center">
-		<div>
-			<Code bind:this={code} lang="json" theme="github-dark" code={``} />
-
-			<Action
-				do={() =>
-					code.update`
-			{
-				"type": "script",
-				"title": "Pay me 1 tADA",
-				"run": {...
-				}
-			}`}
-			/>
-
-			<Action do={() => code.selectLines`2`} />
-			<Action do={() => code.selectLines`3`} />
-			<Action do={() => code.selectLines`4-5`} />
-
-			<Action
-				do={() =>
-					code.update`
-			{
-				"type": "script",
-				"title": "Pay me 1 tADA",
-				"run": {
-					"build_1": {...
-					},
-					"sign_2": {...
-					},
-					"submit_3": {...
-					}
-				}
-			}`}
-			/>
-
-			<Action do={() => code.selectLines`0`} />
-
-			<Action
-				do={() =>
-					code.update`
-			{
-				"type": "script",
-				"title": "Pay me 1 tADA",
-				"run": {
-					"build_1": {
-					"type": "buildTx",
-					"name": "TX-1",
-					"tx": {
-						"outputs": [{
-							"address": "addr_test1qrl07u9ssdtd......2ftdp2f6rqvz02jw",
-							"assets": [{
-								"policyId": "ada",
-								"assetName": "ada",
-								"quantity": "1000000"
-							}]
-						}]
-					}
-				},
-				"sign_2": {...
-				},
-				"submit_3": {...
-				}
-				}
-			}`}
-			/>
-
-			<Action
-				do={() =>
-					code.update`
-			{
-				"type": "script",
-				"title": "Pay me 1 tADA",
-				"run": {
-					"build_1": {...
-					},
-					"sign_2": {...
-					},
-					"submit_3": {...
-					}
-				}
-			}`}
-			/>
-
-			<Action
-				do={() =>
-					code.update`
-			{
-				"type": "script",
-				"title": "Pay me 1 tADA",
-				"run": {...
-					"build_1": {...
-					},
-					"sign_2": {
-						"type": "signTxs",
-						"txs": [
-							"{get('cache.build_1.txHex')}"
-						]
-					},
-					"submit_3": {...
-					}
-				}
-			}`}
-			/>
-
-			<Action
-				do={() =>
-					code.update`
-			{
-				"type": "script",
-				"title": "Pay me 1 tADA",
-				"run": {
-					"build_1": {...
-					},
-					"sign_2": {...
-					},
-					"submit_3": {...
-					}
-				}
-			}`}
-			/>
-
-			<Action
-				do={() =>
-					code.update`
-			{
-				"type": "script",
-				"title": "Pay me 1 tADA",
-				"run": {...
-					"build_1": {...
-					},
-					"sign_2": {...
-					},
-					"submit_3": {
-						"type": "submitTxs",
-            			"txs": "{get('cache.sign_2')}"
-					}
-				}
-			}`}
-			/>
-		</div>
 	</Slide> -->
+
+	<Slide class="h-full place-content-center place-items-center">
+			<p class="text-3xl font-bold drop-shadow-sm">102.3</p>
+			<p>&zwnj;</p>
+
+
+		<Transition>
+			<p class="pb-5 text-lg font-bold drop-shadow-sm">Developer environment</p>
+		</Transition>
+	</Slide>
+
+	<Slide class="h-full place-content-center place-items-center">
+		<img style="height: 900px;" src='/src/lib/assets/code-liveserver.png' alt="GC Playground" />
+	</Slide>
+
+	<Slide class="h-full place-content-center place-items-center">
+		<img style="height: 900px;" src='/src/lib/assets/code-run-page.png' alt="GC Playground" />
+	</Slide>
+
+
+	<Slide class="h-full place-content-center place-items-center">
+
+			<p class="text-3xl font-bold drop-shadow-sm">102.4</p>
+			<p>&zwnj;</p>
+
+		<Transition>
+			<p class="pb-5 text-lg font-bold drop-shadow-sm">GC Library</p>
+		</Transition>
+	</Slide>
+
+	<Slide class="h-full place-content-center place-items-center">
+		<div class="flex flex-row">
+			<div id="code">
+				<Code
+					bind:this={code2}
+					lang="html"
+					theme="github-dark"
+					code={`index.html:
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <script 
+		src='https:.../npm/@gamechanger-finance/gc/dist/browser.min.js'>
+	</script>
+</head>
+
+<body>
+
+    <h1>dApp</h1>
+    <p>This is my first dApp.</p>
+
+    <script src="index.js"></script>
+</body>
+
+</html>`}
+				/>
+			</div>
+			<div id="code">
+				<Code
+					bind:this={code3}
+					lang="javascript"
+					theme="github-dark"
+					code={`index.js:
+
+async function main() {
+    const gc = window.gc
+
+    console.log(gc);
+}
+
+window.onload = function () {
+    main();
+}`}
+				/>
+				<Action do={() => code2.selectLines`9,18`} />
+					<Action do={() => code3.selectLines`4`} />
+			</div>
+
+		</div>
+
+	</Slide>
+
+	<Slide class="h-full place-content-center place-items-center">
+		<img style="height: 900px;" src='/src/lib/assets/dapp-basic-1.png' alt="GC Playground" />
+	</Slide>	
+
+	<Slide class="h-full place-content-center place-items-center">
+		<div class="flex flex-row">
+			<div id="code">
+				<Code
+					bind:this={code4}
+					lang="html"
+					theme="github-dark"
+
+					code={`index.html:
+
+<!DOCTYPE html>
+<html>
+
+<head>
+...
+</head>
+
+<body class="p-3">
+
+    <h1>dApp</h1>
+    <p>This is my first dApp.</p>
+
+    <a id="txLink" 
+       href='https://beta-preprod-wallet.gamechanger.finance'>
+       Transaction
+    </a>
+
+    <script src="index.js"></script>
+</body>
+
+</html>`}
+				/>
+			</div>
+			<div id="code">
+				<Code
+					bind:this={code5}
+					lang="javascript"
+					theme="github-dark"
+					code={`index.js:
+
+let txLinkElement = document.getElementById('txLink');
+
+async function main() {
+    const gc = window.gc
+
+    let gcscript = {
+        "type": "script",
+        "title": "🚀 TX",
+        "run": {...
+        }
+    }
+
+    const actionUrl = await gc.encode.url({
+        input: JSON.stringify(gcscript),
+        apiVersion: '2',
+        network: "preprod"
+    })
+
+    txLinkElement.setAttribute("href", actionUrl)
+}
+
+window.onload = function () {...}`}
+				/>
+			</div>
+
+		</div>
+	<Action do={() => code4.selectLines`15-18`} />
+		
+	<Action do={() => code5.selectLines`3`} />
+	<Action do={() => code5.selectLines`8-13`} />
+	<Action do={() => code5.selectLines`15-20`} />		
+	<Action do={() => code5.selectLines`21`} />
+</Slide>
+
+	
+
 </Presentation>
