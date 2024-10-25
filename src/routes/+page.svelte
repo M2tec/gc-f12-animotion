@@ -5,6 +5,7 @@
 	let text: HTMLParagraphElement
 	let code: Code
 	let image: HTMLImageElement
+	let image2: HTMLImageElement
 
 	import Playground_1 from '$lib/assets/playground_1.webp'
 </script>
@@ -80,6 +81,18 @@
 	</Slide>
 
 	
+	<Slide class="h-full place-content-center place-items-center">
+		<img bind:this={image2} style="height: 900px;" src={Playground_1} alt="GC Playground" />
+		<Transition do={() => (image2.src = '/src/lib/assets/advanced_1.webp')}></Transition>
+		<!-- <Transition do={() => (image.src = '/src/lib/assets/playground_3.webp')}></Transition>
+		<Transition do={() => (image.src = '/src/lib/assets/playground_4.webp')}></Transition>
+		<Transition do={() => (image.src = '/src/lib/assets/playground_5.webp')}></Transition>
+		<Transition do={() => (image.src = '/src/lib/assets/playground_6.webp')}></Transition>
+		<Transition do={() => (image.src = '/src/lib/assets/playground_7.webp')}></Transition>
+		<Transition do={() => (image.src = '/src/lib/assets/playground_8.webp')}></Transition> -->
+	</Slide>
+
+
 
 	<Slide class="h-full place-content-center place-items-center">
 		<Transition>
