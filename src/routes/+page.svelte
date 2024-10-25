@@ -16,7 +16,7 @@
 </script>
 
 <Presentation options={{ history: true, transition: 'slide', controls: false, progress: true }}>
-	<!-- <Slide class="h-full place-content-center place-items-center">
+	<Slide class="h-full place-content-center place-items-center">
 		<Transition>
 			<p class="text-3xl drop-shadow-xl">Welcome!</p>
 		</Transition>
@@ -210,7 +210,7 @@
 
 		<Action do={() => (image2.src = '/src/lib/assets/advanced_8a.webp')} />	
 
-	</Slide> -->
+	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
 			<p class="text-3xl font-bold drop-shadow-sm">102.3</p>
