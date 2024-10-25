@@ -22,17 +22,13 @@
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
-		<Transition>
 			<p bind:this={text} class="text-3xl font-bold drop-shadow-sm">Game</p>
 			<p bind:this={text} class="text-lg font-bold drop-shadow-sm">changer</p>
-		</Transition>
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
-		<Transition>
 			<p bind:this={text} class="text-3xl font-bold drop-shadow-sm">Module 101</p>
 			<p>&zwnj;</p>
-		</Transition>
 
 		<Transition>
 			<p bind:this={text} class="text-base font-bold drop-shadow-sm">Introduction</p>
@@ -40,10 +36,8 @@
 	</Slide> 
 
 	<Slide class="h-full place-content-center place-items-center">
-		<Transition>
 			<p bind:this={text} class="text-3xl font-bold drop-shadow-sm">STL's</p>
 			<p>&zwnj;</p>
-		</Transition>
 
 		<Transition>
 			<p bind:this={text} class="pb-5 text-base font-bold drop-shadow-sm">
@@ -71,10 +65,8 @@
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
-		<Transition>
 			<p bind:this={text} class="text-3xl font-bold drop-shadow-sm">101.1</p>
 			<p>&zwnj;</p>
-		</Transition>
 
 		<Transition>
 			<p bind:this={text} class="pb-5 text-lg font-bold drop-shadow-sm">The Gamechanger way</p>
@@ -98,33 +90,27 @@
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
-		<Transition>
 			<p bind:this={text} class="pb-5 text-base font-bold drop-shadow-sm">GC Architecture</p>
 			<img style="height: 900px;" src={Arch} alt="Gamechanger Architecture" />
-		</Transition>
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
-		<Transition>
 			<p bind:this={text} class="pb-5 text-base font-bold drop-shadow-sm">• Transparancy</p>
 			<p bind:this={text} class="pb-5 text-base font-bold drop-shadow-sm">• Security</p>
 			<img style="height: 900px;" src={Transparancy} alt="Gamechanger Architecture" />
-		</Transition>
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
-		<Transition>
 			<p bind:this={text} class="pb-5 text-base font-bold drop-shadow-sm">• Decentralization</p>
 			<p bind:this={text} class="pb-5 text-base font-bold drop-shadow-sm">• Interoperablity</p>
 			<img style="height: 900px;" src={Decentralization} alt="Gamechanger Architecture" />
-		</Transition>
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
-		<Transition>
+
 			<p bind:this={text} class="text-3xl font-bold drop-shadow-sm">101.2</p>
 			<p>&zwnj;</p>
-		</Transition>
+
 
 		<Transition>
 			<p bind:this={text} class="pb-5 text-lg font-bold drop-shadow-sm">Playground</p>
@@ -132,14 +118,12 @@
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
-		<Transition><img style="height: 900px;" src={Playground} alt="GC Playground" /></Transition>
+		<img style="height: 900px;" src={Playground} alt="GC Playground" />
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
-		<Transition>
 			<p bind:this={text} class="text-3xl font-bold drop-shadow-sm">101.3</p>
 			<p>&zwnj;</p>
-		</Transition>
 
 		<Transition>
 			<p bind:this={text} class="pb-5 text-lg font-bold drop-shadow-sm">GC script basics</p>
