@@ -17,17 +17,17 @@
 <Presentation options={{ history: true, transition: 'slide', controls: false, progress: false }}>
 	<Slide class="h-full place-content-center place-items-center">
 		<Transition>
-			<p bind:this={text} class="text-3xl drop-shadow-xl">Welcome!</p>
+			<p bind:this={text} class="text-5xl drop-shadow-xl">Welcome!</p>
 		</Transition>
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
-			<p bind:this={text} class="text-3xl font-bold drop-shadow-sm">Game</p>
-			<p bind:this={text} class="text-lg font-bold drop-shadow-sm">changer</p>
+			<p bind:this={text} class="text-5xl font-bold drop-shadow-sm">Game</p>
+			<p bind:this={text} class="text-3xl font-bold drop-shadow-sm">changer</p>
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
-			<p bind:this={text} class="text-3xl font-bold drop-shadow-sm">Module 101</p>
+			<p bind:this={text} class="text-5xl font-bold drop-shadow-sm">Module 101</p>
 			<p>&zwnj;</p>
 
 		<Transition>
@@ -36,7 +36,7 @@
 	</Slide> 
 
 	<Slide class="h-full place-content-center place-items-center">
-			<p bind:this={text} class="text-3xl font-bold drop-shadow-sm">STL's</p>
+			<p bind:this={text} class="text-5xl font-bold drop-shadow-sm">STL's</p>
 			<p>&zwnj;</p>
 
 		<Transition>
@@ -65,11 +65,11 @@
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
-			<p bind:this={text} class="text-3xl font-bold drop-shadow-sm">101.1</p>
+			<p bind:this={text} class="text-5xl font-bold drop-shadow-sm">101.1</p>
 			<p>&zwnj;</p>
 
 		<Transition>
-			<p bind:this={text} class="pb-5 text-lg font-bold drop-shadow-sm">The Gamechanger way</p>
+			<p bind:this={text} class="pb-5 text-3xl font-bold drop-shadow-sm">The Gamechanger way</p>
 		</Transition>
 
 		<Transition>
@@ -108,12 +108,12 @@
 
 	<Slide class="h-full place-content-center place-items-center">
 
-			<p bind:this={text} class="text-3xl font-bold drop-shadow-sm">101.2</p>
+			<p bind:this={text} class="text-5xl font-bold drop-shadow-sm">101.2</p>
 			<p>&zwnj;</p>
 
 
 		<Transition>
-			<p bind:this={text} class="pb-5 text-lg font-bold drop-shadow-sm">Playground</p>
+			<p bind:this={text} class="pb-5 text-3xl font-bold drop-shadow-sm">Playground</p>
 		</Transition>
 	</Slide>
 
@@ -122,11 +122,11 @@
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
-			<p bind:this={text} class="text-3xl font-bold drop-shadow-sm">101.3</p>
+			<p bind:this={text} class="text-5xl font-bold drop-shadow-sm">101.3</p>
 			<p>&zwnj;</p>
 
 		<Transition>
-			<p bind:this={text} class="pb-5 text-lg font-bold drop-shadow-sm">GC script basics</p>
+			<p bind:this={text} class="pb-5 text-3xl font-bold drop-shadow-sm">GC script basics</p>
 		</Transition>
 	</Slide> 
 
