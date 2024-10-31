@@ -77,7 +77,7 @@ html {
 	/* 
 	background-clip: text;
 	-webkit-text-fill-color: transparent; */
-	min-height: 50px;
+	min-height: 60px;
 	padding-top:10px;
 	padding-bottom: 5px;
 	background: linear-gradient(90deg, rgba(94,158,238,1) 0%, rgba(99,94,214,1) 100%);
@@ -86,7 +86,7 @@ html {
 }
 
 .text-lg {
-	min-height: 50px;
+	min-height: 60px;
 	padding-top:10px;
 	padding-bottom: 5px;
 	background: linear-gradient(90deg, rgba(94,158,238,1) 0%, rgba(99,94,214,1) 100%);

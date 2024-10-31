@@ -15,7 +15,7 @@
 	import Playground_1 from '$lib/assets/playground_1.webp'
 </script>
 
-<Presentation options={{ history: true, transition: 'slide', controls: false, progress: true }}>
+<Presentation options={{ history: true, transition: 'slide', controls: false, progress: false }}>
 	<Slide class="h-full place-content-center place-items-center">
 		<Transition>
 			<p class="text-3xl drop-shadow-xl">Welcome!</p>
