@@ -18,17 +18,17 @@
 <Presentation options={{ history: true, transition: 'slide', controls: false, progress: false }}>
 	<Slide class="h-full place-content-center place-items-center">
 		<Transition>
-			<p class="text-3xl drop-shadow-xl">Welcome!</p>
+			<p class="text-5xl drop-shadow-xl">Welcome!</p>
 		</Transition>
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
-			<p class="text-3xl font-bold drop-shadow-sm">Game</p>
-			<p class="text-lg font-bold drop-shadow-sm">changer</p>
+			<p class="text-5xl font-bold drop-shadow-sm">Game</p>
+			<p class="text-3xl font-bold drop-shadow-sm">changer</p>
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
-			<p class="text-3xl font-bold drop-shadow-sm">Module 102</p>
+			<p class="text-5xl font-bold drop-shadow-sm">Module 102</p>
 			<p>&zwnj;</p>
 
 		<Transition>
@@ -37,7 +37,7 @@
 	</Slide> 
 	
 	<Slide class="h-full place-content-center place-items-center">
-			<p class="text-3xl font-bold drop-shadow-sm">STL's</p>
+			<p class="text-5xl font-bold drop-shadow-sm">STL's</p>
 			<p>&zwnj;</p>
 
 		<Transition>
@@ -65,11 +65,11 @@
 	</Slide> 
 
 	<Slide class="h-full place-content-center place-items-center">
-		<p class="text-3xl font-bold drop-shadow-sm">102.1</p>
+		<p class="text-5xl font-bold drop-shadow-sm">102.1</p>
 		<p>&zwnj;</p>
 
 		<Transition>
-			<p class="pb-5 text-lg font-bold drop-shadow-sm">Sending transactions</p>
+			<p class="pb-5 text-3xl font-bold drop-shadow-sm">Sending transactions</p>
 		</Transition> 
 	</Slide>
 
@@ -86,12 +86,12 @@
 
 	<Slide class="h-full place-content-center place-items-center">
 
-			<p class="text-3xl font-bold drop-shadow-sm">102.2</p>
+			<p class="text-5xl font-bold drop-shadow-sm">102.2</p>
 			<p>&zwnj;</p>
 
 
 		<Transition>
-			<p class="pb-5 text-lg font-bold drop-shadow-sm">Under the hood</p>
+			<p class="pb-5 text-3xl font-bold drop-shadow-sm">Under the hood</p>
 		</Transition>
 	</Slide>
 
@@ -213,12 +213,12 @@
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
-			<p class="text-3xl font-bold drop-shadow-sm">102.3</p>
+			<p class="text-5xl font-bold drop-shadow-sm">102.3</p>
 			<p>&zwnj;</p>
 
 
 		<Transition>
-			<p class="pb-5 text-lg font-bold drop-shadow-sm">Developer environment</p>
+			<p class="pb-5 text-3xl font-bold drop-shadow-sm">Developer environment</p>
 		</Transition>
 	</Slide>
 
@@ -233,11 +233,11 @@
 
 	<Slide class="h-full place-content-center place-items-center">
 
-			<p class="text-3xl font-bold drop-shadow-sm">102.4</p>
+			<p class="text-5xl font-bold drop-shadow-sm">102.4</p>
 			<p>&zwnj;</p>
 
 		<Transition>
-			<p class="pb-5 text-lg font-bold drop-shadow-sm">GC Library</p>
+			<p class="pb-5 text-3xl font-bold drop-shadow-sm">GC Library</p>
 		</Transition>
 	</Slide>
 
