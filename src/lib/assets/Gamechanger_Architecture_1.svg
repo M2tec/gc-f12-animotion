@@ -212,7 +212,7 @@
      inkscape:groupmode="layer"
      id="layer5"
      inkscape:label="Developers_GC"
-     style="display:inline">
+     style="display:none">
     <rect
        style="fill:#9b9fba;fill-opacity:0.561152;stroke:#000000;stroke-width:1.73375;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
        id="rect4160-9"
@@ -306,7 +306,7 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="Developers_Nix"
-     style="display:inline">
+     style="display:none">
     <rect
        style="fill:#9b9fba;fill-opacity:0.561152;stroke:#000000;stroke-width:1.73375;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
        id="rect4160"
@@ -437,7 +437,7 @@
      inkscape:groupmode="layer"
      id="layer7"
      inkscape:label="ServerAPI"
-     style="display:inline">
+     style="display:none">
     <rect
        style="display:inline;fill:#9b9fba;fill-opacity:0.561152;stroke:#000000;stroke-width:1.73375;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
        id="rect5704"
