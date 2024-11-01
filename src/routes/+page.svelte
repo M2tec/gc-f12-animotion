@@ -4,11 +4,12 @@
 
 	let text: HTMLParagraphElement
 	let code: Code
+	let image: HTMLImageElement
 	let circle = tween({ x: 0, y: 80, r: 80, fill: '#00ffff' })
 	let items = $state([1, 2, 3, 4])
 	let layout = $state('flex gap-4')
 
-	import Arch from '$lib/assets/Gamechanger_Architecture.svg'
+	import Arch from '$lib/assets/Gamechanger_Architecture_1.svg'
 	import Transparancy from '$lib/assets/Transparancy.svg'
 	import Decentralization from '$lib/assets/Decentralization.svg'
 	import Playground from '$lib/assets/Playground.webp'
@@ -91,7 +92,9 @@
 
 	<Slide class="h-full place-content-center place-items-center">
 			<p bind:this={text} class="pb-5 text-base font-bold drop-shadow-sm">GC Architecture</p>
-			<img style="height: 900px;" src={Arch} alt="Gamechanger Architecture" />
+			<img bind:this={image} style="height: 900px;" src={Arch} alt="Gamechanger Architecture" />
+			<Transition do={() => (image.src = '/src/lib/assets/Gamechanger_Architecture_2.svg')}></Transition>
+			<Transition do={() => (image.src = '/src/lib/assets/Gamechanger_Architecture_3.svg')}></Transition>				
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
@@ -103,10 +106,7 @@
 	<Slide class="h-full place-content-center place-items-center">
 			<p bind:this={text} class="pb-5 text-base font-bold drop-shadow-sm">• Decentralization</p>
 			<p bind:this={text} class="pb-5 text-base font-bold drop-shadow-sm">• Interoperablity</p>
-			<img bind:this={image} style="height: 900px;" src={Decentralization} alt="Gamechanger Architecture" />
-			<Transition do={() => (image.src = '/src/lib/assets/Gamechanger_Architecture_1.svg')}></Transition>
-			<Transition do={() => (image.src = '/src/lib/assets/Gamechanger_Architecture_2.svg')}></Transition>
-			<Transition do={() => (image.src = '/src/lib/assets/Gamechanger_Architecture_3.svg')}></Transition>			
+			<img style="height: 900px;" src={Decentralization} alt="Gamechanger Architecture" />	
 	</Slide>
 
 

@@ -8,7 +8,7 @@
    version="1.1"
    id="svg5"
    inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
-   sodipodi:docname="Gamechanger_Architecture.svg"
+   sodipodi:docname="Gamechanger_Architecture_3.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -25,14 +25,14 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.66331435"
-     inkscape:cx="801.27921"
-     inkscape:cy="572.12693"
+     inkscape:cx="679.16517"
+     inkscape:cy="573.63451"
      inkscape:window-width="1887"
      inkscape:window-height="1403"
      inkscape:window-x="26"
      inkscape:window-y="23"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer7" />
+     inkscape:current-layer="layer5" />
   <defs
      id="defs2">
     <marker
@@ -207,231 +207,6 @@
          style="font-weight:bold;fill:#010101;fill-opacity:1;stroke:none;stroke-width:1.32832"
          x="242.38162"
          y="276.73395">Users</tspan></text>
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer5"
-     inkscape:label="Developers_GC"
-     style="display:inline">
-    <rect
-       style="fill:#9b9fba;fill-opacity:0.561152;stroke:#000000;stroke-width:1.73375;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-       id="rect4160-9"
-       width="81.150894"
-       height="47.384747"
-       x="204.86356"
-       y="192.7262"
-       ry="3.2895632" />
-    <rect
-       style="fill:#ffffff;stroke:#000000;stroke-width:0.799405;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-       id="rect234-31"
-       width="41.005569"
-       height="28.826338"
-       x="221.04018"
-       y="206.16171"
-       ry="3.2895634" />
-    <text
-       xml:space="preserve"
-       style="font-size:10.7316px;font-family:Verdana;-inkscape-font-specification:'Verdana, Normal';text-align:center;text-anchor:middle;fill:#010101;fill-opacity:1;stroke:#000000;stroke-width:1.32832;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-       x="241.54297"
-       y="226.78314"
-       id="text952-9"><tspan
-         sodipodi:role="line"
-         id="tspan950-4"
-         style="font-weight:bold;fill:#010101;fill-opacity:1;stroke:none;stroke-width:1.32832"
-         x="241.54297"
-         y="226.78314">dApp</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:7.00351px;font-family:Verdana;-inkscape-font-specification:'Verdana, Normal';text-align:center;text-anchor:middle;fill:#010101;fill-opacity:1;stroke:none;stroke-width:0.866875;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-       x="241.95476"
-       y="214.24823"
-       id="text2185-7"><tspan
-         sodipodi:role="line"
-         id="tspan2183-8"
-         style="stroke-width:0.866875"
-         x="241.95476"
-         y="214.24823">Javascipt</tspan></text>
-    <path
-       style="fill:#010101;fill-opacity:1;stroke:#000000;stroke-width:1.73375;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-       d="M 241.54334,245.7518 V 234.9881"
-       id="path2274-8" />
-    <rect
-       style="fill:#ffffff;stroke:#000000;stroke-width:0.799405;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-       id="rect234-5-7"
-       width="41.44252"
-       height="41.492306"
-       x="204.39638"
-       y="143.09607"
-       ry="3.2895634" />
-    <text
-       xml:space="preserve"
-       style="font-size:6.35776px;font-family:Verdana;-inkscape-font-specification:'Verdana, Normal';text-align:center;text-anchor:middle;fill:#010101;fill-opacity:1;stroke:#000000;stroke-width:0.786945;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-       x="223.51859"
-       y="166.44974"
-       id="text952-3-8"><tspan
-         sodipodi:role="line"
-         style="font-weight:bold;fill:#010101;fill-opacity:1;stroke:none;stroke-width:0.786945"
-         x="223.51859"
-         y="166.44974"
-         id="tspan1962-5">GC</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:7.00351px;font-family:Verdana;-inkscape-font-specification:'Verdana, Normal';text-align:center;text-anchor:middle;fill:#010101;fill-opacity:1;stroke:none;stroke-width:0.866875;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-       x="230.9424"
-       y="200.51488"
-       id="text2185-2-6"><tspan
-         sodipodi:role="line"
-         id="tspan2183-0-8"
-         style="font-weight:bold;stroke-width:0.866875"
-         x="230.9424"
-         y="200.51488">Developers</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:4.85022px;font-family:Verdana;-inkscape-font-specification:'Verdana, Normal';text-align:center;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.600346;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-       x="242.56734"
-       y="251.12999"
-       id="text2185-1-3-4"><tspan
-         sodipodi:role="line"
-         id="tspan2183-2-1-9"
-         style="fill:#ffffff;fill-opacity:1;stroke-width:0.600346"
-         x="242.56734"
-         y="251.12999">JSON definition</tspan><tspan
-         sodipodi:role="line"
-         style="fill:#ffffff;fill-opacity:1;stroke-width:0.600346"
-         x="242.56734"
-         y="257.19278"
-         id="tspan8345">Tx Review</tspan></text>
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer3"
-     inkscape:label="Developers_Nix"
-     style="display:inline">
-    <rect
-       style="fill:#9b9fba;fill-opacity:0.561152;stroke:#000000;stroke-width:1.73375;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-       id="rect4160"
-       width="82.908669"
-       height="196.81169"
-       x="29.267834"
-       y="43.299255"
-       ry="3.2895632" />
-    <rect
-       style="fill:#ffffff;stroke:#000000;stroke-width:0.799405;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-       id="rect234"
-       width="41.005569"
-       height="28.826338"
-       x="49.173412"
-       y="203.92659"
-       ry="3.2895634" />
-    <text
-       xml:space="preserve"
-       style="font-size:10.7316px;font-family:Verdana;-inkscape-font-specification:'Verdana, Normal';text-align:center;text-anchor:middle;fill:#010101;fill-opacity:1;stroke:#000000;stroke-width:1.32832;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-       x="69.676201"
-       y="221.33701"
-       id="text952"><tspan
-         sodipodi:role="line"
-         id="tspan950"
-         style="font-weight:bold;fill:#010101;fill-opacity:1;stroke:none;stroke-width:1.32832"
-         x="69.676201"
-         y="221.33701">dApp</tspan></text>
-    <rect
-       style="fill:#ffffff;stroke:#000000;stroke-width:0.799405;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-       id="rect234-5"
-       width="69.915024"
-       height="131.33885"
-       x="36.607285"
-       y="68.120712"
-       ry="3.2895634" />
-    <text
-       xml:space="preserve"
-       style="font-size:6.35776px;font-family:Verdana;-inkscape-font-specification:'Verdana, Normal';text-align:center;text-anchor:middle;fill:#010101;fill-opacity:1;stroke:#000000;stroke-width:0.786945;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-       x="72.162773"
-       y="116.59263"
-       id="text952-3"><tspan
-         sodipodi:role="line"
-         id="tspan950-5"
-         style="font-weight:bold;fill:#010101;fill-opacity:1;stroke:none;stroke-width:0.786945"
-         x="72.162773"
-         y="116.59263">Custom</tspan><tspan
-         sodipodi:role="line"
-         style="font-weight:bold;fill:#010101;fill-opacity:1;stroke:none;stroke-width:0.786945"
-         x="72.162773"
-         y="124.53983"
-         id="tspan1962">Backend</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:7.00351px;font-family:Verdana;-inkscape-font-specification:'Verdana, Normal';text-align:center;text-anchor:middle;fill:#010101;fill-opacity:1;stroke:none;stroke-width:0.866875;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-       x="71.851929"
-       y="91.706184"
-       id="text2185"><tspan
-         sodipodi:role="line"
-         id="tspan2183"
-         style="stroke-width:0.866875"
-         x="71.851929"
-         y="91.706184">Haskell</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:7.00351px;font-family:Verdana;-inkscape-font-specification:'Verdana, Normal';text-align:center;text-anchor:middle;fill:#010101;fill-opacity:1;stroke:none;stroke-width:0.866875;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-       x="55.966599"
-       y="52.2006"
-       id="text2185-2"><tspan
-         sodipodi:role="line"
-         id="tspan2183-0"
-         style="font-weight:bold;stroke-width:0.866875"
-         x="55.966599"
-         y="52.2006">Developers</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:7.00351px;font-family:Verdana;-inkscape-font-specification:'Verdana, Normal';text-align:center;text-anchor:middle;fill:#010101;fill-opacity:1;stroke:none;stroke-width:0.866875;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-       x="70.879318"
-       y="178.73746"
-       id="text2185-1"><tspan
-         sodipodi:role="line"
-         id="tspan2183-2"
-         style="stroke-width:0.866875"
-         x="70.879318"
-         y="178.73746">Nix</tspan></text>
-    <path
-       style="fill:#010101;fill-opacity:1;stroke:#000000;stroke-width:1.73375;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-       d="m 69.676193,243.51668 v -10.7637"
-       id="path2274" />
-    <path
-       style="fill:#010101;fill-opacity:1;stroke:#000000;stroke-width:1.73375;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-       d="m 70.038524,203.91447 v -4.45491"
-       id="path2274-9"
-       sodipodi:nodetypes="cc" />
-    <text
-       xml:space="preserve"
-       style="font-size:7.00351px;font-family:Verdana;-inkscape-font-specification:'Verdana, Normal';text-align:center;text-anchor:middle;fill:#010101;fill-opacity:1;stroke:none;stroke-width:0.866875;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-       x="72.022835"
-       y="146.84142"
-       id="text2185-7-7-3"><tspan
-         sodipodi:role="line"
-         id="tspan2183-8-1-9"
-         style="stroke-width:0.866875"
-         x="72.022835"
-         y="146.84142">Indexing</tspan><tspan
-         sodipodi:role="line"
-         style="stroke-width:0.866875"
-         x="72.022835"
-         y="155.59581"
-         id="tspan4725-4">Database</tspan><tspan
-         sodipodi:role="line"
-         style="stroke-width:0.866875"
-         x="72.022835"
-         y="164.35019"
-         id="tspan4727-8">Query</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:7.00351px;font-family:Verdana;-inkscape-font-specification:'Verdana, Normal';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.866875;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-       x="70.649086"
-       y="251.82283"
-       id="text2185-1-3"><tspan
-         sodipodi:role="line"
-         id="tspan2183-2-1"
-         style="fill:#ffffff;fill-opacity:1;stroke-width:0.866875"
-         x="70.649086"
-         y="251.82283">CBOR sign</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
@@ -946,5 +721,230 @@
        d="m 112.17657,139.80999 14.62268,0.0413"
        id="path2274-9-4-2-9-8"
        sodipodi:nodetypes="cc" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="Developers_GC"
+     style="display:inline">
+    <rect
+       style="fill:#9b9fba;fill-opacity:0.561152;stroke:#000000;stroke-width:1.73375;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4160-9"
+       width="81.150894"
+       height="47.384747"
+       x="204.86356"
+       y="192.7262"
+       ry="3.2895632" />
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.799405;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       id="rect234-31"
+       width="41.005569"
+       height="28.826338"
+       x="221.04018"
+       y="206.16171"
+       ry="3.2895634" />
+    <text
+       xml:space="preserve"
+       style="font-size:10.7316px;font-family:Verdana;-inkscape-font-specification:'Verdana, Normal';text-align:center;text-anchor:middle;fill:#010101;fill-opacity:1;stroke:#000000;stroke-width:1.32832;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       x="241.54297"
+       y="226.78314"
+       id="text952-9"><tspan
+         sodipodi:role="line"
+         id="tspan950-4"
+         style="font-weight:bold;fill:#010101;fill-opacity:1;stroke:none;stroke-width:1.32832"
+         x="241.54297"
+         y="226.78314">dApp</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.00351px;font-family:Verdana;-inkscape-font-specification:'Verdana, Normal';text-align:center;text-anchor:middle;fill:#010101;fill-opacity:1;stroke:none;stroke-width:0.866875;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       x="241.95476"
+       y="214.24823"
+       id="text2185-7"><tspan
+         sodipodi:role="line"
+         id="tspan2183-8"
+         style="stroke-width:0.866875"
+         x="241.95476"
+         y="214.24823">Javascipt</tspan></text>
+    <path
+       style="fill:#010101;fill-opacity:1;stroke:#000000;stroke-width:1.73375;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="M 241.54334,245.7518 V 234.9881"
+       id="path2274-8" />
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.799405;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       id="rect234-5-7"
+       width="41.44252"
+       height="41.492306"
+       x="204.39638"
+       y="143.09607"
+       ry="3.2895634" />
+    <text
+       xml:space="preserve"
+       style="font-size:6.35776px;font-family:Verdana;-inkscape-font-specification:'Verdana, Normal';text-align:center;text-anchor:middle;fill:#010101;fill-opacity:1;stroke:#000000;stroke-width:0.786945;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       x="223.51859"
+       y="166.44974"
+       id="text952-3-8"><tspan
+         sodipodi:role="line"
+         style="font-weight:bold;fill:#010101;fill-opacity:1;stroke:none;stroke-width:0.786945"
+         x="223.51859"
+         y="166.44974"
+         id="tspan1962-5">GC</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.00351px;font-family:Verdana;-inkscape-font-specification:'Verdana, Normal';text-align:center;text-anchor:middle;fill:#010101;fill-opacity:1;stroke:none;stroke-width:0.866875;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       x="230.9424"
+       y="200.51488"
+       id="text2185-2-6"><tspan
+         sodipodi:role="line"
+         id="tspan2183-0-8"
+         style="font-weight:bold;stroke-width:0.866875"
+         x="230.9424"
+         y="200.51488">Developers</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.85022px;font-family:Verdana;-inkscape-font-specification:'Verdana, Normal';text-align:center;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.600346;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       x="242.56734"
+       y="251.12999"
+       id="text2185-1-3-4"><tspan
+         sodipodi:role="line"
+         id="tspan2183-2-1-9"
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.600346"
+         x="242.56734"
+         y="251.12999">JSON definition</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.600346"
+         x="242.56734"
+         y="257.19278"
+         id="tspan8345">Tx Review</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Developers_Nix"
+     style="display:inline">
+    <rect
+       style="fill:#9b9fba;fill-opacity:0.561152;stroke:#000000;stroke-width:1.73375;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4160"
+       width="82.908669"
+       height="196.81169"
+       x="29.267834"
+       y="43.299255"
+       ry="3.2895632" />
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.799405;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       id="rect234"
+       width="41.005569"
+       height="28.826338"
+       x="49.173412"
+       y="203.92659"
+       ry="3.2895634" />
+    <text
+       xml:space="preserve"
+       style="font-size:10.7316px;font-family:Verdana;-inkscape-font-specification:'Verdana, Normal';text-align:center;text-anchor:middle;fill:#010101;fill-opacity:1;stroke:#000000;stroke-width:1.32832;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       x="69.676201"
+       y="221.33701"
+       id="text952"><tspan
+         sodipodi:role="line"
+         id="tspan950"
+         style="font-weight:bold;fill:#010101;fill-opacity:1;stroke:none;stroke-width:1.32832"
+         x="69.676201"
+         y="221.33701">dApp</tspan></text>
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.799405;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       id="rect234-5"
+       width="69.915024"
+       height="131.33885"
+       x="36.607285"
+       y="68.120712"
+       ry="3.2895634" />
+    <text
+       xml:space="preserve"
+       style="font-size:6.35776px;font-family:Verdana;-inkscape-font-specification:'Verdana, Normal';text-align:center;text-anchor:middle;fill:#010101;fill-opacity:1;stroke:#000000;stroke-width:0.786945;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       x="72.162773"
+       y="116.59263"
+       id="text952-3"><tspan
+         sodipodi:role="line"
+         id="tspan950-5"
+         style="font-weight:bold;fill:#010101;fill-opacity:1;stroke:none;stroke-width:0.786945"
+         x="72.162773"
+         y="116.59263">Custom</tspan><tspan
+         sodipodi:role="line"
+         style="font-weight:bold;fill:#010101;fill-opacity:1;stroke:none;stroke-width:0.786945"
+         x="72.162773"
+         y="124.53983"
+         id="tspan1962">Backend</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.00351px;font-family:Verdana;-inkscape-font-specification:'Verdana, Normal';text-align:center;text-anchor:middle;fill:#010101;fill-opacity:1;stroke:none;stroke-width:0.866875;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       x="71.851929"
+       y="91.706184"
+       id="text2185"><tspan
+         sodipodi:role="line"
+         id="tspan2183"
+         style="stroke-width:0.866875"
+         x="71.851929"
+         y="91.706184">Haskell</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.00351px;font-family:Verdana;-inkscape-font-specification:'Verdana, Normal';text-align:center;text-anchor:middle;fill:#010101;fill-opacity:1;stroke:none;stroke-width:0.866875;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       x="55.966599"
+       y="52.2006"
+       id="text2185-2"><tspan
+         sodipodi:role="line"
+         id="tspan2183-0"
+         style="font-weight:bold;stroke-width:0.866875"
+         x="55.966599"
+         y="52.2006">Developers</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.00351px;font-family:Verdana;-inkscape-font-specification:'Verdana, Normal';text-align:center;text-anchor:middle;fill:#010101;fill-opacity:1;stroke:none;stroke-width:0.866875;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       x="70.879318"
+       y="178.73746"
+       id="text2185-1"><tspan
+         sodipodi:role="line"
+         id="tspan2183-2"
+         style="stroke-width:0.866875"
+         x="70.879318"
+         y="178.73746">Nix</tspan></text>
+    <path
+       style="fill:#010101;fill-opacity:1;stroke:#000000;stroke-width:1.73375;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="m 69.676193,243.51668 v -10.7637"
+       id="path2274" />
+    <path
+       style="fill:#010101;fill-opacity:1;stroke:#000000;stroke-width:1.73375;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="m 70.038524,203.91447 v -4.45491"
+       id="path2274-9"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.00351px;font-family:Verdana;-inkscape-font-specification:'Verdana, Normal';text-align:center;text-anchor:middle;fill:#010101;fill-opacity:1;stroke:none;stroke-width:0.866875;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       x="72.022835"
+       y="146.84142"
+       id="text2185-7-7-3"><tspan
+         sodipodi:role="line"
+         id="tspan2183-8-1-9"
+         style="stroke-width:0.866875"
+         x="72.022835"
+         y="146.84142">Indexing</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.866875"
+         x="72.022835"
+         y="155.59581"
+         id="tspan4725-4">Database</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.866875"
+         x="72.022835"
+         y="164.35019"
+         id="tspan4727-8">Query</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.00351px;font-family:Verdana;-inkscape-font-specification:'Verdana, Normal';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.866875;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       x="70.649086"
+       y="251.82283"
+       id="text2185-1-3"><tspan
+         sodipodi:role="line"
+         id="tspan2183-2-1"
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.866875"
+         x="70.649086"
+         y="251.82283">CBOR sign</tspan></text>
   </g>
 </svg>
