@@ -13,6 +13,7 @@
 	let code4: Code
 	let code5: Code
 	let code6: Code
+	let code7: Code
 	import Playground_1 from '/src/lib/assets/workshop_1.png'
 	import gc_vid from '/src/lib/assets/GC_Intro_Edu_Gray.mp4'
 </script>
@@ -87,6 +88,12 @@
 		<Transition>
 			<p class="pb-5 text-base font-bold drop-shadow-sm">
 				102.2 I understand the GC script structure.
+			</p>
+		</Transition>
+
+		<Transition>
+			<p class="pb-5 text-base font-bold drop-shadow-sm">
+				102.3 I can setup my developer environment.
 			</p>
 		</Transition>
 
@@ -226,6 +233,11 @@
 		<Action do={() => (image2.src = '/src/lib/assets/advanced_8a.webp')} />
 	</Slide>
 
+	<Slide class="h-full place-content-center place-items-center">
+		<p class="text-4xl font-bold drop-shadow-sm">Edit in playground</p>
+		<p>&zwnj;</p>
+		<img style="height: 800px;" src='/src/lib/assets/open_playground.png' alt="open playground" />
+	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
 		<p class="text-4xl font-bold drop-shadow-sm">102.2</p>
@@ -390,7 +402,7 @@
 		<p>&zwnj;</p>
 
 		<Transition>
-			<p class="pb-5 text-3xl font-bold drop-shadow-sm">Developer environment</p>
+			<p class="pb-5 text-base font-bold drop-shadow-sm">Developer environment</p>
 		</Transition>
 	</Slide>
 
@@ -402,16 +414,52 @@
 		<img style="height: 900px;" src="/src/lib/assets/code-run-page.png" alt="GC Playground" />
 	</Slide>
 
-	<Slide class="h-full place-content-center place-items-center">
+	<Slide class="h-full place-content-center place-items-center"> <!-- Section: 102.4  -->
 		<p class="text-4xl font-bold drop-shadow-sm">102.4</p>
 		<p>&zwnj;</p>
 
 		<Transition>
-			<p class="pb-5 text-3xl font-bold drop-shadow-sm">GC Library</p>
+			<p class="pb-5 text-base font-bold drop-shadow-sm">GC Library</p>
 		</Transition>
 	</Slide>
 
-	<Slide class="h-full place-content-center place-items-center">
+	<Slide class="h-full place-content-center place-items-center"> <!-- Code: dApp link only-->
+		<div class="flex flex-row">
+			<div id="code">
+				<Code
+					bind:this={code7}
+					lang="html"
+					theme="github-dark"
+					code={`index.html:
+
+<!DOCTYPE html>
+<html>
+<head>...</head>
+
+<body class="p-3">
+    <h1>dApp</h1>
+    <p>This is my first dApp.</p>
+
+    <a id="txLink" 
+href='https://beta-preprod-wallet.gamechanger.finance/api/2/run/1-H
+2Uz2rbQBDGX2XQxS2kjv-kCfbNJNDmEgx16aEEMdaOrHWlXXl3ZEs2hj5HL33FPkJnJ
+nmpbYOab3f3NN7M6RNyUFE0jnzhdcnQVseY8BH79_PEd5thAQTAEnj3MRFTU5WlrJGW
+....
+OOY18tC82XUFvxj7Ctwpf6Gjr4Cum1K4HljHITd_c_lgGQ6fcvMApMXPsOCFf9r0tFn
+AXlNNs_PBQAA'>
+       Transaction
+    </a>
+
+    <script src="index.js"></script>
+</body>
+</html>`}
+				/>
+			</div>
+		</div>
+		<Action do={() => code7.selectLines`11-18`} />
+	</Slide> 
+
+	<Slide class="h-full place-content-center place-items-center"> <!-- Code: dApp full 1 -->
 		<div class="flex flex-row">
 			<div id="code">
 				<Code
@@ -463,11 +511,12 @@ window.onload = function () {
 		</div>
 	</Slide>
 
-	<Slide class="h-full place-content-center place-items-center">
-		<img style="height: 900px;" src="/src/lib/assets/dapp-basic-1.png" alt="GC Playground" />
+	<Slide class="h-full place-content-center place-items-center"> <!-- Image: dApp basic-->
+		<img style="height: 900px;" src="/src/lib/assets/dapp-basic-1.png" alt="dApp basic" />
 	</Slide>
 
-	<Slide class="h-full place-content-center place-items-center">
+
+	<Slide class="h-full place-content-center place-items-center"> <!-- Code: dApp full 2 -->
 		<div class="flex flex-row">
 			<div id="code">
 				<Code
@@ -541,23 +590,6 @@ window.onload = function () {...}`}
 
 	<Slide class="h-full place-content-center place-items-center">
 		<img bind:this={image} style="height: 900px;" src={Playground_1} alt="GC workshop" />
-		<Transition do={() => (image.src = '/src/lib/assets/workshop_2.png')}></Transition>
-		<Transition do={() => (image.src = '/src/lib/assets/workshop_3.png')}></Transition>
-		<Transition do={() => (image.src = '/src/lib/assets/workshop_4.png')}></Transition>
-		<Transition do={() => (image.src = '/src/lib/assets/workshop_5.png')}></Transition>
-		<Transition do={() => (image.src = '/src/lib/assets/workshop_6.png')}></Transition>
-		<Transition do={() => (image.src = '/src/lib/assets/workshop_7.png')}></Transition>
-		<Transition do={() => (image.src = '/src/lib/assets/workshop_8.png')}></Transition>
-		<Transition do={() => (image.src = '/src/lib/assets/workshop_9.png')}></Transition>
-		<Transition do={() => (image.src = '/src/lib/assets/workshop_10.png')}></Transition>
-		<Transition do={() => (image.src = '/src/lib/assets/workshop_11.png')}></Transition>
-		<Transition do={() => (image.src = '/src/lib/assets/workshop_12.png')}></Transition>
-		<Transition do={() => (image.src = '/src/lib/assets/workshop_13.png')}></Transition>
-		<Transition do={() => (image.src = '/src/lib/assets/workshop_14.png')}></Transition>
-		<Transition do={() => (image.src = '/src/lib/assets/workshop_15.png')}></Transition>
-		<Transition do={() => (image.src = '/src/lib/assets/workshop_16.png')}></Transition>
-		<Transition do={() => (image.src = '/src/lib/assets/workshop_17.png')}></Transition>
-		<Transition do={() => (image.src = '/src/lib/assets/workshop_18.png')}></Transition>
 		<Transition do={() => (image.src = '/src/lib/assets/workshop_19.png')}></Transition>
 	</Slide>
 </Presentation>
