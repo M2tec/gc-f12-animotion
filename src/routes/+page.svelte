@@ -618,7 +618,44 @@ window.onload = function () {...}`}
 		<Action do={() => code5.selectLines`21`} />
 	</Slide> 
 
-	<Slide class="h-full place-content-center place-items-center">
-		<img bind:this={image} style="height: 900px;" src={Playground_1} alt="GC workshop" />
+	<Slide class="h-full place-content-center place-items-center"> <!-- POS -->
+		<p class="text-4xl font-bold drop-shadow-sm">Links</p>
+		<div >
+			<a class="large" id="txLink" 
+				href='https://www.m2tec.nl'>
+				M2tec website
+			</a> 
+		</div>
+		<div >
+			<a class="large" id="txLink" 
+				href='https://github.com/GameChangerFinance/gamechanger.wallet/blob/main/docs/README.md'>
+				GC Developer documentation
+			</a> 
+		</div>
+		<div >
+			<a class="large" id="txLink" 
+				href='https://beta-wallet.gamechanger.finance/doc/api/v2'>
+				GCScript and ISL Language Reference
+			</a> 
+		</div>
+		<div >
+			<a class="large" id="txLink" 
+				href='https://github.com/GameChangerFinance/gamechanger.wallet/blob/main/examples/README.md'>
+				GCScript 75+ code examples
+			</a> 
+		</div>
+		<div >
+			<a class="large" id="txLink" 
+				href='https://www.npmjs.com/package/@gamechanger-finance/gc'>
+				GC library (NPM) 
+			</a> 
+		</div>
+		<div >
+			<a class="large" id="txLink" 
+				href='https://gamechanger.finance'>
+				GC Wallet website 
+			</a> 
+		</div>
 	</Slide>
+
 </Presentation>
