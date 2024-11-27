@@ -68,7 +68,7 @@ html {
 	view-transition-name: none;
 }
 
- img {
+img {
   border-radius: 10px;
 }
 
@@ -108,6 +108,15 @@ html {
 	background: linear-gradient(90deg, rgba(94,158,238,1) 0%, rgba(99,94,214,1) 100%);
     color: transparent;
     background-clip: text;
+}
+
+.large {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a, a:hover, a:focus, a:active {
+	text-decoration: underline;
+	color: inherit;
 }
 
 .text-base {

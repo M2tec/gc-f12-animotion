@@ -6,6 +6,7 @@
 	let code: Code
 	let image: HTMLImageElement
 	let image2: HTMLImageElement
+	let image3: HTMLImageElement
 
 	let code2: Code
 	let code3: Code
@@ -15,12 +16,13 @@
 	let code6: Code
 	let code7: Code
 	import Playground_1 from '/src/lib/assets/workshop_1.png'
-	import gc_vid from '/src/lib/assets/GC_Intro_Edu_Gray.mp4'
+	import DSL_1 from '/src/lib/assets/workshop_3.png'
 </script>
 
 <Presentation options={{ history: true, transition: 'slide', controls: false, progress: false }}>
 	<Slide class="h-full place-content-center place-items-center">
 		<img style="height: 900px;" src='/src/lib/assets/workshop_1.png' alt="Welcome" />
+
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
@@ -29,6 +31,10 @@
 			<source src="/src/lib/assets/GC_Intro_Edu_Gray.mp4" type="video/mp4" />
 			Your browser does not support the video tag.
 		</video>
+	</Slide>
+
+	<Slide class="h-full place-content-center place-items-center">
+		<img style="height: 900px;" src='/src/lib/assets/workshop_2.png' alt="Developers" />
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
@@ -41,31 +47,38 @@
 	</Slide>
 
 
-	<Slide class="h-full place-content-center place-items-center">
+	<Slide class="h-full place-content-center place-items-center"> <!-- Discord  -->
 		<p class="text-4xl font-bold drop-shadow-sm">GC Discord</p>
 		<p>&zwnj;</p>
 		<img style="height: 400px;" src='/src/lib/assets/GC_Discord.svg' alt="GC svg" />
 	</Slide>
 
-	<Slide class="h-full place-content-center place-items-center">
+	<Slide class="h-full place-content-center place-items-center"> <!-- Get wakket  -->
 		<p class="text-4xl font-bold drop-shadow-sm">Get your GC wallet</p>
 		<p>&zwnj;</p>
 		<img style="height: 400px;" src='/src/lib/assets/Gamechanger.svg' alt="GC svg" />
 	</Slide>
 
-	<Slide class="h-full place-content-center place-items-center">
+	<Slide class="h-full place-content-center place-items-center"> <!-- Airdrop  -->
 		<p class="text-4xl font-bold drop-shadow-sm">Testnet Airdrop</p>
 		<p>&zwnj;</p>
 		<img style="height: 800px;" src='/src/lib/assets/airdrop.png' alt="Airdrop" />
 	</Slide>
 
-	<Slide class="h-full place-content-center place-items-center">
+	<Slide class="h-full place-content-center place-items-center"> <!-- POS -->
 		<p class="text-4xl font-bold drop-shadow-sm">Point of sale dApp</p>
 		<p>&zwnj;</p>
 		<img style="height: 700px;" src='/src/lib/assets/paypad-qr.svg' alt="Tx" />
+		<p>&zwnj;</p>
+		<div >
+			<a class="large" id="txLink" 
+			href='https://www.m2tec.nl'>
+			M2tec
+		 </a> 
+		</div>
 	</Slide>	
 
-	<Slide class="h-full place-content-center place-items-center">
+	<Slide class="h-full place-content-center place-items-center"> <!-- Module 102 -->
 		<p class="text-4xl font-bold drop-shadow-sm">Module 102</p>
 		<p>&zwnj;</p>
 
@@ -74,7 +87,7 @@
 		</Transition>
 	</Slide>
 
-	<Slide class="h-full place-content-center place-items-center">
+	<Slide class="h-full place-content-center place-items-center"> <!-- SLT -->
 		<p class="text-4xl font-bold drop-shadow-sm">SLT's</p>
 		<p>&zwnj;</p>
 
@@ -109,7 +122,7 @@
 		</Transition>
 	</Slide>
 
-	<Slide class="h-full place-content-center place-items-center">
+	<Slide class="h-full place-content-center place-items-center"> <!-- 102.1  -->
 		<p class="text-4xl font-bold drop-shadow-sm">102.1</p>
 		<p>&zwnj;</p>
 
@@ -118,7 +131,7 @@
 		</Transition>
 	</Slide>
 
-	<Slide class="h-full place-content-center place-items-center">
+	<Slide class="h-full place-content-center place-items-center"> <!-- TX Advanced -->
 		<div class="flex flex-row">
 			<div id="code">
 				<Code
@@ -233,13 +246,13 @@
 		<Action do={() => (image2.src = '/src/lib/assets/advanced_8a.webp')} />
 	</Slide>
 
-	<Slide class="h-full place-content-center place-items-center">
+	<Slide class="h-full place-content-center place-items-center"> <!-- Playground -->
 		<p class="text-4xl font-bold drop-shadow-sm">Edit in playground</p>
 		<p>&zwnj;</p>
 		<img style="height: 800px;" src='/src/lib/assets/open_playground.png' alt="open playground" />
 	</Slide>
 
-	<Slide class="h-full place-content-center place-items-center">
+	<Slide class="h-full place-content-center place-items-center"> <!-- 102.2  -->
 		<p class="text-4xl font-bold drop-shadow-sm">102.2</p>
 		<p>&zwnj;</p>
 
@@ -248,6 +261,12 @@
 		</Transition>
 	</Slide>
 
+	<Slide class="h-full place-content-center place-items-center"> <!-- DSL  -->
+		<img bind:this={image3} style="height: 900px;" src={DSL_1} alt="GC workshop" />
+		<Transition do={() => (image3.src = '/src/lib/assets/workshop_4.png')}></Transition>
+		<Transition do={() => (image3.src = '/src/lib/assets/workshop_5.png')}></Transition>
+		<Transition do={() => (image3.src = '/src/lib/assets/workshop_6.png')}></Transition>
+	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center"> <!-- Code: Transaction steps  -->
 		<div id="code">
@@ -423,8 +442,12 @@
 		</Transition>
 	</Slide>
 
+	<Slide class="h-full place-content-center place-items-center"> <!-- Image: dApp basic-->
+		<img style="height: 900px;" src="/src/lib/assets/connect_link.png" alt="dApp basic" />
+	</Slide>
+
 	<Slide class="h-full place-content-center place-items-center"> <!-- Code: dApp link only-->
-		<div class="flex flex-row">
+		<div class="flex flex-col">
 			<div id="code">
 				<Code
 					bind:this={code7}
@@ -455,6 +478,13 @@ AXlNNs_PBQAA'>
 </html>`}
 				/>
 			</div>
+
+		 <div >
+			<a class="large" id="txLink" 
+			href='https://beta-preprod-wallet.gamechanger.finance/api/2/run/1-H4sIAAAAAAAAA-2Uz2rbQBDGX2XQxS2kjv-kCfbNJNDmEgx16aEEMdaOrHWlXXl3ZEs2hj5HL33FPkJnJRsCqaGnnmpbYOab3f3NN7M6RNyUFE0jnzhdcnQVseY8BH79_PEd5thAQTAEnj3MRFTU5WlrJGWRaQ_yQyixKcgwONpU5LkPD7Sl3JbkwFgmP4VFRtCzFZcV-x6ULmjcgE2Bg7KsdK4WdQ9m80dIK5OEIwDz3O48NLYCtqAo1YagqHLW79B7YmCHxmOXfNq8D48G7tEpNBbaLAF0dFqtYNkEXpvrpHlUgCY8Xd4TFnQFqXVttbAjqLygocIeaANLyxkk6EmOmMEHSb7P0KykxC_CKTAPWJZSeGH7kDGXfnp9vZKspMvqy_FoEroWG6kureOZFw_vrTafyChtVmGpiI64cmLvISqsCp3I0XN0FKFqo55xRcO4dSx-YUDQTs08ufm_m_-km0bC4t9n4_UqMIVFsHjRGGlDHbpzqimafj1EqJQjHyYg_IvFVR5uXD64qybeK1Y73meOB3vn3N2koXWdpdvCF2uerOtNg_vBNy5vG1Xlm4xv3WR_k6vBuvBjHCd3q93N-2o82mbJKGVVjtJbt9nuB6P1TlA6E1uGs28tBJ61p66cLrKp0MgMNRIYDtpPdHyWr4xjO4ejOBR9YQyDtKj9yaI5MlMY7OjTRZ8UMeqc1Jxcob2XoJCmmHsKHgbq6LAiftNLMMmof-kq9Ln-SHXv7TF6PoOOY18tC82XUFvxj7Ctwpf6Gjr4Cum1K4HljHITd_c_lgGQ6fcvMApMXPsOCFf9r0tFn7X7H4-_AXlNNs_PBQAA'>
+			Transaction
+		 </a> 
+		</div>
 		</div>
 		<Action do={() => code7.selectLines`11-18`} />
 	</Slide> 
@@ -590,6 +620,5 @@ window.onload = function () {...}`}
 
 	<Slide class="h-full place-content-center place-items-center">
 		<img bind:this={image} style="height: 900px;" src={Playground_1} alt="GC workshop" />
-		<Transition do={() => (image.src = '/src/lib/assets/workshop_19.png')}></Transition>
 	</Slide>
 </Presentation>
