@@ -88,7 +88,7 @@
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center"> <!-- SLT -->
-		<p class="text-4xl font-bold drop-shadow-sm">SLT's</p>
+		<p class="text-4xl font-bold drop-shadow-sm">Learning Targets</p>
 		<p>&zwnj;</p>
 
 
