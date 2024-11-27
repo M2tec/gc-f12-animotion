@@ -94,7 +94,7 @@
 
 		<Transition>
 			<p class="pb-5 text-base font-bold drop-shadow-sm">
-				102.1 I can analyze what is going on during a GC transaction
+				102.1 I can analyze what is going on during a GC connection
 			</p>
 		</Transition>
 
@@ -545,7 +545,6 @@ window.onload = function () {
 	<Slide class="h-full place-content-center place-items-center"> <!-- Image: dApp basic-->
 		<img style="height: 900px;" src="/src/lib/assets/dapp-basic-1.png" alt="dApp basic" />
 	</Slide>
-
 
 	<Slide class="h-full place-content-center place-items-center"> <!-- Code: dApp full 2 -->
 		<div class="flex flex-row">
