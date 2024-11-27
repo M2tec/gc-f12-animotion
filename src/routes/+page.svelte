@@ -266,6 +266,7 @@
 		<Transition do={() => (image3.src = '/src/lib/assets/workshop_4.png')}></Transition>
 		<Transition do={() => (image3.src = '/src/lib/assets/workshop_5.png')}></Transition>
 		<Transition do={() => (image3.src = '/src/lib/assets/workshop_6.png')}></Transition>
+		<Transition do={() => (image3.src = '/src/lib/assets/workshop_7.png')}></Transition>
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center"> <!-- Code: Transaction steps  -->
