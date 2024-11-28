@@ -15,33 +15,23 @@
 	let code5: Code
 	let code6: Code
 	let code7: Code
-	import GC_intro_vid from '$lib/assets/GC_Intro_Edu_Gray.mp4'
-	import workshop_1 from '$lib/assets/workshop_1.png'
-	import workshop_2 from '$lib/assets/workshop_2.png'
-	import workshop_3 from '$lib/assets/workshop_3.png'
-	import workshop_4 from '$lib/assets/workshop_4.png'
-	import workshop_5 from '$lib/assets/workshop_5.png'
-	import workshop_6 from '$lib/assets/workshop_6.png'
-	import workshop_7 from '$lib/assets/workshop_7.png'
-	import workshop_8 from '$lib/assets/workshop_8.png'
-	import workshop_9 from '$lib/assets/workshop_9.png'	
 </script>
 
 <Presentation options={{ history: true, transition: 'slide', controls: false, progress: false }}>
 	<Slide class="h-full place-content-center place-items-center">
-		<img style="height: 900px;" src={workshop_1} alt="Welcome" />
+		<img style="height: 900px;" src='/assets/workshop_1.png' alt="Welcome" />
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
 		<video width="1920" height="1080" autoplay controls>
-			<track default kind="captions" srclang="en" src={GC_intro_vid} />
-			<source src={GC_intro_vid} type="video/mp4" />
+			<track default kind="captions" srclang="en" src='/assets/GC_intro_vid.mp4' />
+			<source src='/assets/GC_intro_vid.mp4' type="video/mp4" />
 			Your browser does not support the video tag.
 		</video>
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
-		<img style="height: 900px;" src={workshop_2} alt="Developers" />
+		<img style="height: 900px;" src='/assets/workshop_2'alt="Developers" />
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
@@ -57,25 +47,25 @@
 	<Slide class="h-full place-content-center place-items-center"> <!-- Discord  -->
 		<p class="text-4xl font-bold drop-shadow-sm">GC Discord</p>
 		<p>&zwnj;</p>
-		<img style="height: 400px;" src={GC_Discord.svg' alt="GC svg" />
+		<img style="height: 400px;" src='/assets/GC_Discord.svg' alt="GC svg" />
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center"> <!-- Get wakket  -->
 		<p class="text-4xl font-bold drop-shadow-sm">Get your GC wallet</p>
 		<p>&zwnj;</p>
-		<img style="height: 400px;" src={Gamechanger.svg' alt="GC svg" />
+		<img style="height: 400px;" src='/assets/Gamechanger.svg' alt="GC svg" />
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center"> <!-- Airdrop  -->
 		<p class="text-4xl font-bold drop-shadow-sm">Testnet Airdrop</p>
 		<p>&zwnj;</p>
-		<img style="height: 800px;" src={airdrop} alt="Airdrop" />
+		<img style="height: 800px;" src='/assets/airdrop'alt="Airdrop" />
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center"> <!-- POS -->
 		<p class="text-4xl font-bold drop-shadow-sm">Point of sale dApp</p>
 		<p>&zwnj;</p>
-		<img style="height: 700px;" src={paypad-qr.svg} alt="Tx" />
+		<img style="height: 700px;" src='/assets/paypad-qr.svg'alt="Tx" />
 		<p>&zwnj;</p>
 		<div >
 			<a class="large" id="txLink" 
@@ -170,14 +160,14 @@
 		</div>
 
 		<Action do={() => code.selectLines`3`} />
-		<Action do={() => (image2.src = {advanced_2.webp')} />
+		<Action do={() => (image2.src = '/assets/advanced_2.webp')} />
 
 		<Action do={() => code.selectLines`4-10`} />
-		<Action do={() => (image2.src = {advanced_3.webp')} />
+		<Action do={() => (image2.src = '/assets/advanced_3.webp')} />
 
-		<Action do={() => (image2.src = {advanced_4.webp')} />
-		<Action do={() => (image2.src = {advanced_5a.webp')} />
-		<Action do={() => (image2.src = {advanced_6a.webp')} />
+		<Action do={() => (image2.src = '/assets/advanced_4.webp')} />
+		<Action do={() => (image2.src = '/assets/advanced_5a.webp')} />
+		<Action do={() => (image2.src = '/assets/advanced_6a.webp')} />
 
 		<Action
 			do={async () => {
@@ -225,7 +215,7 @@
 			}}
 		/>
 
-		<Action do={() => (image2.src = {advanced_7a.webp')} />
+		<Action do={() => (image2.src = '/assets/advanced_7a.webp')} />
 
 		<Action
 			do={async () => {
@@ -250,13 +240,13 @@
 			}}
 		/>
 
-		<Action do={() => (image2.src = {advanced_8a.webp})} />
+		<Action do={() => (image2.src = '/assets/advanced_8a.webp')} />
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center"> <!-- Playground -->
 		<p class="text-4xl font-bold drop-shadow-sm">Edit in playground</p>
 		<p>&zwnj;</p>
-		<img style="height: 800px;" src={open_playground} alt="open playground" />
+		<img style="height: 800px;" src='/assets/open_playground' alt="open playground" />
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center"> <!-- 102.2  -->
@@ -269,11 +259,11 @@
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center"> <!-- DSL  -->
-		<img bind:this={image3} style="height: 900px;" src={DSL_1} alt="GC workshop" />
-		<Transition do={() => (image3.src = {workshop_4.})}></Transition>
-		<Transition do={() => (image3.src = {workshop_5.})}></Transition>
-		<Transition do={() => (image3.src = {workshop_6.})}></Transition>
-		<Transition do={() => (image3.src = {workshop_7.})}></Transition>
+		<img bind:this={image3} style="height: 900px;" src='/assets/DSL_1' alt="GC workshop" />
+		<Transition do={() => (image3.src = '/assets/workshop_4.png')}></Transition>
+		<Transition do={() => (image3.src = '/assets/workshop_5.png')}></Transition>
+		<Transition do={() => (image3.src = '/assets/workshop_6.png')}></Transition>
+		<Transition do={() => (image3.src = '/assets/workshop_7.png')}></Transition>
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center"> <!-- Code: Transaction steps  -->
