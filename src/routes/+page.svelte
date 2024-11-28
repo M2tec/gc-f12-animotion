@@ -135,20 +135,7 @@
 					bind:this={code}
 					lang="json"
 					theme="github-dark"
-					code={`
-		{
-			"type": "script",
-			"title": "Pay me 1 tADA",
-			"description": 
-					"This is a payment request. Developer notes: The 'outputs' 
-					property of the 'buildTx' API function allows you to define 
-					multi-asset transaction outputs. In Cardano assets are 
-					defined by a policyId and an assetName, for tADA we use 
-					'ada' in both cases. A GameChanger Wallet Dapp Demo. 
-					https://gamechanger.finance/",
-			"run": {...
-			}
-		}`}
+					code={``}
 				/>
 			</div>
 			<img
@@ -159,58 +146,74 @@
 			/>
 		</div>
 
-		<Action do={() => code.selectLines`3`} />
+		<Action
+			do={async () => {
+				await code.update`
+{
+	"type": "script",
+	"title": "Pay me 1 tADA",
+	"description": "This....",
+	"run": {...
+	}
+}`
+				await code.selectLines`3`
+			}}
+		/>
+
 		<Action do={() => (image2.src = '/assets/advanced_2.webp')} />
 
-		<Action do={() => code.selectLines`4-10`} />
+		<Action
+			do={async () => {
+				await code.update`
+{
+	"type": "script",
+	"title": "Pay me 1 tADA",
+	"description": 
+		"This is a payment request. Developer notes: The 'outputs' 
+		property of the 'buildTx' API function allows you to define 
+		multi-asset transaction outputs. In Cardano assets are 
+		defined by a policyId and an assetName, for tADA we use 
+		'ada' in both cases. A GameChanger Wallet Dapp Demo. 
+		https://gamechanger.finance/",
+	"run": {...
+	}
+}`
+				await code.selectLines`5-10`
+			}}
+		/>
 		<Action do={() => (image2.src = '/assets/advanced_3.webp')} />
 
 		<Action do={() => (image2.src = '/assets/advanced_4.webp')} />
 		<Action do={() => (image2.src = '/assets/advanced_5a.webp')} />
 		<Action do={() => (image2.src = '/assets/advanced_6a.webp')} />
-
 		<Action
 			do={async () => {
 				await code.update`
-		{
-			"type": "script",
-			"title": "Pay me 1 tADA",
-			"description": "This....",
-			"run": {...
-			}
-		}`
-				await code.selectLines`5`
-			}}
-		/>
-
-		<Action
-			do={async () => {
-				await code.update`
-		{
-			"type": "script",
-			"title": "Pay me 1 tADA",
-			"description": "This....",
-			"run": {
-				"stage1_build_transaction": {
-					"type": "buildTx",
-					"tx": {
-						"outputs": [
+{
+	"type": "script",
+	"title": "Pay me 1 tADA",
+	"description": "This....",
+	"run": {
+		"stage1_build_transaction": {
+			"type": "buildTx",
+			"tx": {
+				"outputs": [
+					{
+						"address": "addr_test1qrl...ftdp2f6rqvz02jw",
+						"assets": [
 							{
-								"address": "addr_test1qrl...ftdp2f6rqvz02jw",
-								"assets": [
-									{
-										"policyId": "ada",
-										"assetName": "ada",
-										"quantity": "1000000"
-									}
-								]
+								"policyId": "ada",
+								"assetName": "ada",
+								"quantity": "1000000"
 							}
-						]
+						]s
 					}
-				},
-				"stage2_sign_transaction": {...
-				},....
-			`
+				]
+			}
+		},
+		"stage2_sign_transaction": {...
+		},....
+`
 				await code.selectLines`6`
 			}}
 		/>
@@ -220,22 +223,22 @@
 		<Action
 			do={async () => {
 				await code.update`
-		{
-			"type": "script",
-			"title": "Pay me 1 tADA",
-			"description": "This....",
-			"run": {
-				"stage1_build_transaction": {...
-				},
-       			"stage2_sign_transaction": {
-					"type": "signTxs",
-					"namePattern": "Signed Demo Transaction",
-					"detailedPermissions": false,
-					"txs": [
-						"{get('cache.stage1_build_transaction.txHex')}"
-					]
-				}...
-        				`
+{
+	"type": "script",
+	"title": "Pay me 1 tADA",
+	"description": "This....",
+	"run": {
+		"stage1_build_transaction": {...
+		},
+		"stage2_sign_transaction": {
+			"type": "signTxs",
+			"namePattern": "Signed Demo Transaction",
+			"detailedPermissions": false,
+			"txs": [
+				"{get('cache.stage1_build_transaction.txHex')}"
+			]
+		}...
+`
 				await code.selectLines`8,13`
 			}}
 		/>
@@ -258,12 +261,24 @@
 		</Transition>
 	</Slide>
 
-	<Slide class="h-full place-content-center place-items-center"> <!-- DSL  -->
-		<img bind:this={image3} style="height: 900px;" src='/assets/workshop_3.png' alt="GC workshop" />
-		<Transition do={() => (image3.src = '/assets/workshop_4.png')}></Transition>
-		<Transition do={() => (image3.src = '/assets/workshop_5.png')}></Transition>
-		<Transition do={() => (image3.src = '/assets/workshop_6.png')}></Transition>
-		<Transition do={() => (image3.src = '/assets/workshop_7.png')}></Transition>
+	<Slide class="h-full place-content-center place-items-center"> <!-- workshop_3  -->
+		<img style="height: 900px;" src='/assets/workshop_3.png' alt="GC workshop" />
+	</Slide>
+
+	<Slide class="h-full place-content-center place-items-center"> <!-- workshop_4 -->
+		<img style="height: 900px;" src='/assets/workshop_4.png' alt="GC workshop" />
+	</Slide>	
+
+	<Slide class="h-full place-content-center place-items-center"> <!-- workshop_5 -->
+		<img style="height: 900px;" src='/assets/workshop_5.png' alt="GC workshop" />
+	</Slide>
+
+	<Slide class="h-full place-content-center place-items-center"> <!-- workshop_6 -->
+		<img style="height: 900px;" src='/assets/workshop_6.png' alt="GC workshop" />
+	</Slide>
+
+	<Slide class="h-full place-content-center place-items-center"> <!-- workshop_7 -->
+		<img style="height: 900px;" src='/assets/workshop_7.png' alt="GC workshop" />
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center"> <!-- Code: Transaction steps  -->
@@ -278,13 +293,13 @@
 			<Action
 			do={() =>
 				code6.update`
-			{
-				"type": "script",
-				"title": "Pay me 1 tADA",
-				"run": {...
-				}
-			}`}
-		/>
+{
+	"type": "script",
+	"title": "Pay me 1 tADA",
+	"run": {...
+	}
+}`}
+			/>
 
 			<Action do={() => code6.selectLines`2`} />
 			<Action do={() => code6.selectLines`3`} />
@@ -293,18 +308,18 @@
 			<Action
 				do={() =>
 					code6.update`
-			{
-				"type": "script",
-				"title": "Pay me 1 tADA",
-				"run": {
-					"build_1": {...
-					},
-					"sign_2": {...
-					},
-					"submit_3": {...
-					}
-				}
-			}`}
+{
+	"type": "script",
+	"title": "Pay me 1 tADA",
+	"run": {
+		"build_1": {...
+		},
+		"sign_2": {...
+		},
+		"submit_3": {...
+		}
+	}
+}`}
 			/>
 
 			<Action do={() => code6.selectLines`0`} />
@@ -312,109 +327,109 @@
 			<Action
 				do={() =>
 					code6.update`
-			{
-				"type": "script",
-				"title": "Pay me 1 tADA",
-				"run": {
-					"build_1": {
-					"type": "buildTx",
-					"name": "TX-1",
-					"tx": {
-						"outputs": [{
-							"address": "addr_test1qrl07u9ssdtd......2ftdp2f6rqvz02jw",
-							"assets": [{
-								"policyId": "ada",
-								"assetName": "ada",
-								"quantity": "1000000"
-							}]
-						}]
-					}
-				},
-				"sign_2": {...
-				},
-				"submit_3": {...
-				}
-				}
-			}`}
+{
+	"type": "script",
+	"title": "Pay me 1 tADA",
+	"run": {
+		"build_1": {
+		"type": "buildTx",
+		"name": "TX-1",
+		"tx": {
+			"outputs": [{
+				"address": "addr_test1qrl07u9ssdtd......2ftdp2f6rqvz02jw",
+				"assets": [{
+					"policyId": "ada",
+					"assetName": "ada",
+					"quantity": "1000000"
+				}]
+			}]
+		}
+	},
+	"sign_2": {...
+	},
+	"submit_3": {...
+	}
+	}
+}`}
 			/>
 
 			<Action
 				do={() =>
 					code6.update`
-			{
-				"type": "script",
-				"title": "Pay me 1 tADA",
-				"run": {
-					"build_1": {...
-					},
-					"sign_2": {...
-					},
-					"submit_3": {...
-					}
-				}
-			}`}
+{
+	"type": "script",
+	"title": "Pay me 1 tADA",
+	"run": {
+		"build_1": {...
+		},
+		"sign_2": {...
+		},
+		"submit_3": {...
+		}
+	}
+}`}
 			/>
 
 			<Action
 				do={() =>
 					code6.update`
-			{
-				"type": "script",
-				"title": "Pay me 1 tADA",
-				"run": {...
-					"build_1": {...
-					},
-					"sign_2": {
-						"type": "signTxs",
-						"txs": [
-							"{get('cache.build_1.txHex')}"
-						]
-					},
-					"submit_3": {...
-					}
-				}
-			}`}
+{
+	"type": "script",
+	"title": "Pay me 1 tADA",
+	"run": {...
+		"build_1": {...
+		},
+		"sign_2": {
+			"type": "signTxs",
+			"txs": [
+				"{get('cache.build_1.txHex')}"
+			]
+		},
+		"submit_3": {...
+		}
+	}
+}`}
 			/>
 
 			<Action
 			do={() =>
 				code6.update`
-			{
-				"type": "script",
-				"title": "Pay me 1 tADA",
-				"run": {
-					"build_1": {...
-					},
-					"sign_2": {...
-					},
-					"submit_3": {...
-					}
-				}
-			}`}
+{
+	"type": "script",
+	"title": "Pay me 1 tADA",
+	"run": {
+		"build_1": {...
+		},
+		"sign_2": {...
+		},
+		"submit_3": {...
+		}
+	}
+}`}
 			/>
 
 			<Action
 				do={() =>
 					code6.update`
-			{
-				"type": "script",
-				"title": "Pay me 1 tADA",
-				"run": {...
-					"build_1": {...
-					},
-					"sign_2": {...
-					},
-					"submit_3": {
-						"type": "submitTxs",
-            			"txs": "{get('cache.sign_2')}"
-					}
-				}
-			}`}
+{
+	"type": "script",
+	"title": "Pay me 1 tADA",
+	"run": {...
+		"build_1": {...
+		},
+		"sign_2": {...
+		},
+		"submit_3": {
+			"type": "submitTxs",
+			"txs": "{get('cache.sign_2')}"
+		}
+	}
+}`}
 			/>			
 		</div>
 	</Slide>	
 
-	<Slide class="h-full place-content-center place-items-center">
+	<Slide class="h-full place-content-center place-items-center"> <!-- 102.3 -->
 		<p class="text-4xl font-bold drop-shadow-sm">102.3</p>
 		<p>&zwnj;</p>
 
@@ -423,15 +438,15 @@
 		</Transition>
 	</Slide>
 
-	<Slide class="h-full place-content-center place-items-center">
+	<Slide class="h-full place-content-center place-items-center"> <!-- liveserver -->
 		<img style="height: 900px;" src="/assets/code-liveserver.png" alt="GC Playground" />
 	</Slide>
 
-	<Slide class="h-full place-content-center place-items-center">
+	<Slide class="h-full place-content-center place-items-center"> <!-- code-run-page -->
 		<img style="height: 900px;" src="/assets/code-run-page.png" alt="GC Playground" />
 	</Slide>
 
-	<Slide class="h-full place-content-center place-items-center"> <!-- Section: 102.4  -->
+	<Slide class="h-full place-content-center place-items-center"> <!-- 102.4  -->
 		<p class="text-4xl font-bold drop-shadow-sm">102.4</p>
 		<p>&zwnj;</p>
 
@@ -615,7 +630,27 @@ window.onload = function () {...}`}
 		<Action do={() => code5.selectLines`21`} />
 	</Slide> 
 
-	<Slide class="h-full place-content-center place-items-center"> <!-- POS -->
+	<Slide class="h-full place-content-center place-items-center"> <!-- workshop 8  -->
+		<img style="height: 900px;" src='/assets/workshop_8.png'alt="workshop 8" />
+	</Slide>
+
+	<Slide class="h-full place-content-center place-items-center"> <!-- workshop 9  -->
+		<img style="height: 900px;" src='/assets/workshop_9.png'alt="workshop 9" />
+	</Slide>
+
+	<Slide class="h-full place-content-center place-items-center"> <!-- workshop 10  -->
+		<img style="height: 900px;" src='/assets/workshop_10.png'alt="workshop 10" />
+	</Slide>
+
+	<Slide class="h-full place-content-center place-items-center"> <!-- workshop 11 -->
+		<img style="height: 900px;" src='/assets/workshop_11.png'alt="workshop 11" />
+	</Slide>
+
+	<Slide class="h-full place-content-center place-items-center"> <!-- workshop 12 -->
+		<img style="height: 900px;" src='/assets/workshop_12.png'alt="workshop 12" />
+	</Slide>
+
+	<Slide class="h-full place-content-center place-items-center"> <!-- Links -->
 		<p class="text-4xl font-bold drop-shadow-sm">Links</p>
 		<div >
 			<a class="large" id="txLink" 
@@ -653,6 +688,7 @@ window.onload = function () {...}`}
 				GC Wallet website 
 			</a> 
 		</div>
+		<p>&zwnj;</p>
 		<div >
 			<a class="large" id="txLink" 
 				href='https://github.com/GameChangerFinance/gamechanger.wallet/blob/main/catalyst/FUND13.md'>
