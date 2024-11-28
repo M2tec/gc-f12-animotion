@@ -24,14 +24,14 @@
 
 	<Slide class="h-full place-content-center place-items-center">
 		<video width="1920" height="1080" autoplay controls>
-			<track default kind="captions" srclang="en" src='/assets/GC_intro_vid.mp4' />
-			<source src='/assets/GC_intro_vid.mp4' type="video/mp4" />
+			<track default kind="captions" srclang="en" src='/assets/GC_Intro_Edu_Gray.mp4' />
+			<source src='/assets/GC_Intro_Edu_Gray.mp4' type="video/mp4" />
 			Your browser does not support the video tag.
 		</video>
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
-		<img style="height: 900px;" src='/assets/workshop_2'alt="Developers" />
+		<img style="height: 900px;" src='/assets/workshop_2.png'alt="Developers" />
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
@@ -59,7 +59,7 @@
 	<Slide class="h-full place-content-center place-items-center"> <!-- Airdrop  -->
 		<p class="text-4xl font-bold drop-shadow-sm">Testnet Airdrop</p>
 		<p>&zwnj;</p>
-		<img style="height: 800px;" src='/assets/airdrop'alt="Airdrop" />
+		<img style="height: 800px;" src='/assets/airdrop.png'alt="Airdrop" />
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center"> <!-- POS -->
@@ -154,7 +154,7 @@
 			<img
 				bind:this={image2}
 				style="height: 950px;"
-				src="/src/lib/assets/advanced_1.webp"
+				src="/assets/advanced_1.webp"
 				alt="GC Playground"
 			/>
 		</div>
@@ -246,7 +246,7 @@
 	<Slide class="h-full place-content-center place-items-center"> <!-- Playground -->
 		<p class="text-4xl font-bold drop-shadow-sm">Edit in playground</p>
 		<p>&zwnj;</p>
-		<img style="height: 800px;" src='/assets/open_playground' alt="open playground" />
+		<img style="height: 800px;" src='/assets/open_playground.png' alt="open playground" />
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center"> <!-- 102.2  -->
@@ -259,7 +259,7 @@
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center"> <!-- DSL  -->
-		<img bind:this={image3} style="height: 900px;" src='/assets/DSL_1' alt="GC workshop" />
+		<img bind:this={image3} style="height: 900px;" src='/assets/workshop_3.png' alt="GC workshop" />
 		<Transition do={() => (image3.src = '/assets/workshop_4.png')}></Transition>
 		<Transition do={() => (image3.src = '/assets/workshop_5.png')}></Transition>
 		<Transition do={() => (image3.src = '/assets/workshop_6.png')}></Transition>
@@ -424,11 +424,11 @@
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
-		<img style="height: 900px;" src="/src/lib/assets/code-liveserver.png" alt="GC Playground" />
+		<img style="height: 900px;" src="/assets/code-liveserver.png" alt="GC Playground" />
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
-		<img style="height: 900px;" src="/src/lib/assets/code-run-page.png" alt="GC Playground" />
+		<img style="height: 900px;" src="/assets/code-run-page.png" alt="GC Playground" />
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center"> <!-- Section: 102.4  -->
@@ -441,7 +441,7 @@
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center"> <!-- Image: dApp basic-->
-		<img style="height: 900px;" src="/src/lib/assets/connect_link.png" alt="dApp basic" />
+		<img style="height: 900px;" src="/assets/connect_link.png" alt="dApp basic" />
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center"> <!-- Code: dApp link only-->
@@ -540,7 +540,7 @@ window.onload = function () {
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center"> <!-- Image: dApp basic-->
-		<img style="height: 900px;" src="/src/lib/assets/dapp-basic-1.png" alt="dApp basic" />
+		<img style="height: 900px;" src="/assets/dapp-basic-1.png" alt="dApp basic" />
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center"> <!-- Code: dApp full 2 -->
