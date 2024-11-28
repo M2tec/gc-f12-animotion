@@ -15,14 +15,21 @@
 	let code5: Code
 	let code6: Code
 	let code7: Code
-	import Playground_1 from '/src/lib/assets/workshop_1.png'
-	import DSL_1 from '/src/lib/assets/workshop_3.png'
+	import GC_intro_vid from '$lib/assets/GC_Intro_Edu_Gray.mp4'
+	import workshop_1 from '$lib/assets/workshop_1.png'
+	import workshop_2 from '$lib/assets/workshop_2.png'
+	import workshop_3 from '$lib/assets/workshop_3.png'
+	import workshop_4 from '$lib/assets/workshop_4.png'
+	import workshop_5 from '$lib/assets/workshop_5.png'
+	import workshop_6 from '$lib/assets/workshop_6.png'
+	import workshop_7 from '$lib/assets/workshop_7.png'
+	import workshop_8 from '$lib/assets/workshop_8.png'
+	import workshop_9 from '$lib/assets/workshop_9.png'	
 </script>
 
 <Presentation options={{ history: true, transition: 'slide', controls: false, progress: false }}>
 	<Slide class="h-full place-content-center place-items-center">
-		<img style="height: 900px;" src='/src/lib/assets/workshop_1.png' alt="Welcome" />
-
+		<img style="height: 900px;" src={workshop_1} alt="Welcome" />
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
