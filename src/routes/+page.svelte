@@ -653,6 +653,12 @@ window.onload = function () {...}`}
 				GC Wallet website 
 			</a> 
 		</div>
+		<div >
+			<a class="large" id="txLink" 
+				href='https://github.com/GameChangerFinance/gamechanger.wallet/blob/main/catalyst/FUND13.md'>
+				Support GC in Catalyst Fund 13: Ideascale proposals
+			</a> 
+		</div>		
 	</Slide>
 
 </Presentation>
