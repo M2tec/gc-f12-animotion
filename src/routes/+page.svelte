@@ -23,13 +23,13 @@
 
 	</Slide>
 
-	<Slide class="h-full place-content-center place-items-center">
+	<!-- <Slide class="h-full place-content-center place-items-center">
 		<video width="1920" height="1080" autoplay controls>
 			<track default kind="captions" srclang="en" src="/src/lib/assets/GC_Intro_Edu_Gray.mp4" />
 			<source src="/src/lib/assets/GC_Intro_Edu_Gray.mp4" type="video/mp4" />
 			Your browser does not support the video tag.
 		</video>
-	</Slide>
+	</Slide> -->
 
 	<Slide class="h-full place-content-center place-items-center">
 		<p class="text-4xl font-bold drop-shadow-sm">Module 201</p>
@@ -53,31 +53,31 @@
 
 		<Transition>
 			<p class="pb-5 text-base font-bold drop-shadow-sm">
-				202.2 I know how to create a workspace with a couple child addresses
+				201.2 I know how to create a workspace with a couple child addresses
 			</p>
 		</Transition>
 
 		<Transition>
 			<p class="pb-5 text-base font-bold drop-shadow-sm">
-				202.3 I know how to create a workspace with a multisig wallet address
+				201.3 I know how to create a workspace with a multisig wallet address
 			</p>
 		</Transition>
 
 		<Transition>
 			<p class="pb-5 text-base font-bold drop-shadow-sm">
-				202.4 I can sign and send a transaction from my multisig wallet and Unimatrix
+				201.4 I can sign and send a transaction from my multisig wallet and Unimatrix
 			</p>
 		</Transition>
 
 		<Transition>
 			<p class="pb-5 text-base font-bold drop-shadow-sm">
-				202.5 I understand how to use Unimatrix for a DAO website
+				201.5 I understand how to use Unimatrix for a DAO website
 			</p>
 		</Transition>
 
 		<Transition>
 			<p class="pb-5 text-base font-bold drop-shadow-sm">
-				Assignment 202: Build a simple DAO website
+				Assignment 201: Build a simple DAO website
 			</p>
 		</Transition>
 	</Slide>
@@ -99,37 +99,79 @@
 
 
 	<Slide class="h-full place-content-center place-items-center"> <!-- TX Advanced -->
+		<p class="text-4xl font-bold drop-shadow-sm">Workspace script</p>
+		<p>&zwnj;</p>	
 		<div class="flex flex-row">
+
+
 			<div id="code">
 				<Code
 					bind:this={code}
 					lang="json"
 					theme="github-dark"
 					code={`
-		{
-			"type": "script",
-			"title": "Pay me 1 tADA",
-			"description": 
-					"This is a payment request. Developer notes: The 'outputs' 
-					property of the 'buildTx' API function allows you to define 
-					multi-asset transaction outputs. In Cardano assets are 
-					defined by a policyId and an assetName, for tADA we use 
-					'ada' in both cases. A GameChanger Wallet Dapp Demo. 
-					https://gamechanger.finance/",
-			"run": {...
-			}
-		}`}
+`}
 				/>
 			</div>
 			<img
 				bind:this={image2}
-				style="height: 950px;"
-				src="/src/lib/assets/advanced_1.webp"
+				style="height: 900px;"
+				src="/assets/workspace_1.png"
 				alt="GC Playground"
 			/>
 		</div>
 
-		<Action do={() => code.selectLines`3`} />
+		<Action
+			do={async () => {
+				await code.update`
+{
+	"type": "script",
+	"title": "Load a configuration",
+	"description": "Loading a Workspace configuration",
+	"run": {
+		"usingWorkspaces": {
+		"type": "loadConfig",
+		"updateId": "Workspace-exercise-1",
+		"layers": [{
+			"type": "Workspace",
+				"items": [{
+						"namePattern": "my_workspace",
+						"titlePattern": "My Workspace",
+						"descriptionPattern": "Wallet settings!"
+				}]
+			}]
+		}
+	}
+}`
+				await code.selectLines`5`
+			}}
+		/>
+
+
+		<Action
+			do={async () => {
+				await code.update`
+{
+    "type": "script",
+    "title": "Load a configuration",
+    "description": "Loading a Workspace configuration into the wallet",
+    "run": {
+        "usingWorkspaces": {
+            "type": "loadConfig",
+            "updateId": "Workspace-exercise-1",
+            "layers": [
+                { ... },
+                { ... },
+                { ... }
+            ]
+        }
+    }
+}`
+				await code.selectLines`5`
+			}}
+		/>
+
+		<!-- <Action do={() => code.selectLines`3`} />
 		<Action do={() => (image2.src = '/src/lib/assets/advanced_2.webp')} />
 
 		<Action do={() => code.selectLines`4-10`} />
@@ -138,20 +180,6 @@
 		<Action do={() => (image2.src = '/src/lib/assets/advanced_4.webp')} />
 		<Action do={() => (image2.src = '/src/lib/assets/advanced_5a.webp')} />
 		<Action do={() => (image2.src = '/src/lib/assets/advanced_6a.webp')} />
-
-		<Action
-			do={async () => {
-				await code.update`
-		{
-			"type": "script",
-			"title": "Pay me 1 tADA",
-			"description": "This....",
-			"run": {...
-			}
-		}`
-				await code.selectLines`5`
-			}}
-		/>
 
 		<Action
 			do={async () => {
@@ -208,9 +236,10 @@
         				`
 				await code.selectLines`8,13`
 			}}
-		/>
+		/> 
 
 		<Action do={() => (image2.src = '/src/lib/assets/advanced_8a.webp')} />
+	-->
 	</Slide>
 
 
