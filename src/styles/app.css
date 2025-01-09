@@ -84,7 +84,23 @@ html {
     background-clip: text;
 }
 
+.text-4xl {
+	/* background-clip: text;
+	-webkit-text-fill-color: transparent; */
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-weight: bold;
+	font-size: 100px;
+	min-height: 100px;
+	padding-top:15px;
+	padding-bottom: 5px;
+	background: linear-gradient(90deg, rgba(94,158,238,1) 0%, rgba(99,94,214,1) 100%);
+    color: transparent;
+    background-clip: text;
+	/* text-shadow: 3px 3px 6px black; */
+}
+
 .text-3xl {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	min-height: 70px;
 	padding-top:15px;
 	padding-bottom: 5px;

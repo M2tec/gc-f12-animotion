@@ -22,13 +22,19 @@
 		</Transition>
 	</Slide>
 
-	<Slide class="h-full place-content-center place-items-center">
-			<p bind:this={text} class="text-5xl font-bold drop-shadow-sm">Game</p>
-			<p bind:this={text} class="text-3xl font-bold drop-shadow-sm">changer</p>
-	</Slide>
+
+	<!-- <Slide class="h-full place-content-center place-items-center">
+		<p class="text-4xl font-bold drop-shadow-sm">Module 101</p>
+		<p>&zwnj;</p>
+
+		<Transition>
+			<p class="text-base font-bold drop-shadow-sm">Getting a wallet</p>
+		</Transition>
+	</Slide> -->
+
 
 	<Slide class="h-full place-content-center place-items-center">
-			<p bind:this={text} class="text-5xl font-bold drop-shadow-sm">Module 101</p>
+			<p bind:this={text} class="text-4xl font-bold drop-shadow-sm">Module 101</p>
 			<p>&zwnj;</p>
 
 		<Transition>
@@ -37,7 +43,7 @@
 	</Slide> 
 
 	<Slide class="h-full place-content-center place-items-center">
-			<p bind:this={text} class="text-5xl font-bold drop-shadow-sm">STL's</p>
+			<p bind:this={text} class="text-4xl font-bold drop-shadow-sm">STL's</p>
 			<p>&zwnj;</p>
 
 		<Transition>
