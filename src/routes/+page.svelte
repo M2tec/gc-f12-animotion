@@ -16,21 +16,20 @@
 </script>
 
 <Presentation options={{ history: true, transition: 'slide', controls: false, progress: false }}>
+
+	<Slide class="h-full place-content-center place-items-center">
+		<video width="1920" height="1080" autoplay controls>
+			<track default kind="captions" srclang="en" src='/assets/GC_Intro_Edu_Gray.mp4' />
+			<source src='/assets/GC_Intro_Edu_Gray.mp4' type="video/mp4" />
+			Your browser does not support the video tag.
+		</video>
+	</Slide>
+
 	<Slide class="h-full place-content-center place-items-center">
 		<Transition>
 			<p bind:this={text} class="text-5xl drop-shadow-xl">Welcome!</p>
 		</Transition>
 	</Slide>
-
-
-	<!-- <Slide class="h-full place-content-center place-items-center">
-		<p class="text-4xl font-bold drop-shadow-sm">Module 101</p>
-		<p>&zwnj;</p>
-
-		<Transition>
-			<p class="text-base font-bold drop-shadow-sm">Getting a wallet</p>
-		</Transition>
-	</Slide> -->
 
 
 	<Slide class="h-full place-content-center place-items-center">
