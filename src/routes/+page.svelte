@@ -19,8 +19,7 @@
 
 <Presentation options={{ history: true, transition: 'slide', controls: false, progress: false }}>
 	<Slide class="h-full place-content-center place-items-center">
-		<img style="height: 900px;" src='/src/lib/assets/workshop_1.png' alt="Welcome" />
-
+		<img style="height: 900px;" src="/src/lib/assets/workshop_1.png" alt="Welcome" />
 	</Slide>
 
 	<!-- <Slide class="h-full place-content-center place-items-center">
@@ -32,91 +31,17 @@
 	</Slide> -->
 
 	<Slide class="h-full place-content-center place-items-center">
-		<p class="text-4xl font-bold drop-shadow-sm">Module 201</p>
+		<!-- Child addreses -->
+		<p class="text-4xl font-bold drop-shadow-sm">Child addresses</p>
 		<p>&zwnj;</p>
-
-		<Transition>
-			<p class="text-base font-bold drop-shadow-sm">Unimatrix shared wallets</p>
-		</Transition>
-	</Slide>
-
-	<Slide class="h-full place-content-center place-items-center"> <!-- SLT -->
-		<p class="text-4xl font-bold drop-shadow-sm">Learning Targets</p>
-		<p>&zwnj;</p>
-
-
-		<Transition>
-			<p class="pb-5 text-base font-bold drop-shadow-sm">
-				201.1 I know what a Worspace is
-			</p>
-		</Transition>
-
-		<Transition>
-			<p class="pb-5 text-base font-bold drop-shadow-sm">
-				201.2 I know how to create a workspace with a couple child addresses
-			</p>
-		</Transition>
-
-		<Transition>
-			<p class="pb-5 text-base font-bold drop-shadow-sm">
-				201.3 I know how to create a workspace with a multisig wallet address
-			</p>
-		</Transition>
-
-		<Transition>
-			<p class="pb-5 text-base font-bold drop-shadow-sm">
-				201.4 I can sign and send a transaction from my multisig wallet and Unimatrix
-			</p>
-		</Transition>
-
-		<Transition>
-			<p class="pb-5 text-base font-bold drop-shadow-sm">
-				201.5 I understand how to use Unimatrix for a DAO website
-			</p>
-		</Transition>
-
-		<Transition>
-			<p class="pb-5 text-base font-bold drop-shadow-sm">
-				Assignment 201: Build a simple DAO website
-			</p>
-		</Transition>
-	</Slide>
-
-	<Slide class="h-full place-content-center place-items-center"> <!-- 202.1  -->
-		<p class="text-4xl font-bold drop-shadow-sm">202.1</p>
-		<p>&zwnj;</p>
-
-		<Transition>
-			<p class="pb-5 text-base font-bold drop-shadow-sm">What is a workspace</p>
-		</Transition>
-	</Slide>
-
-	<Slide class="h-full place-content-center place-items-center">
-		<p class="text-4xl font-bold drop-shadow-sm">Accounts with addresses</p>
-		<p>&zwnj;</p>
-		<img bind:this={image} style="height: 900px;" src='/src/lib/assets/address_BIP_32.svg' alt="GC workshop" />
-	</Slide>
-
-
-	<Slide class="h-full place-content-center place-items-center"> <!-- TX Advanced -->
-		<p class="text-4xl font-bold drop-shadow-sm">Workspace script</p>
-		<p>&zwnj;</p>	
-		<div class="flex flex-row">
-
-
+		<div class="flex flex-row gap-8">
 			<div id="code">
-				<Code
-					bind:this={code}
-					lang="json"
-					theme="github-dark"
-					code={`
-`}
-				/>
+				<Code bind:this={code} lang="json" theme="github-dark" code={``} />
 			</div>
 			<img
-				bind:this={image2}
-				style="height: 900px;"
-				src="/assets/workspace_1.png"
+				bind:this={image3}
+				style="height: 920px;"
+				src="/assets/workspace_address.png"
 				alt="GC Playground"
 			/>
 		</div>
@@ -126,121 +51,172 @@
 				await code.update`
 {
 	"type": "script",
-	"title": "Load a configuration",
-	"description": "Loading a Workspace configuration",
+		...
 	"run": {
 		"usingWorkspaces": {
-		"type": "loadConfig",
-		"updateId": "Workspace-exercise-1",
-		"layers": [{
-			"type": "Workspace",
-				"items": [{
-						"namePattern": "my_workspace",
-						"titlePattern": "My Workspace",
-						"descriptionPattern": "Wallet settings!"
-				}]
-			}]
+			"type": "loadConfig",
+			...
+			"layers": [
+				{ "type": "Workspace", ... }
+				{ "type": "Key", ... }
+			 	{ "type": "Address", ... }
+			]		
 		}
 	}
 }`
-				await code.selectLines`5`
+				await code.selectLines`9-11`
 			}}
 		/>
-
 
 		<Action
 			do={async () => {
 				await code.update`
 {
     "type": "script",
-    "title": "Load a configuration",
-    "description": "Loading a Workspace configuration into the wallet",
+	  ...
     "run": {
         "usingWorkspaces": {
             "type": "loadConfig",
             "updateId": "Workspace-exercise-1",
             "layers": [
-                { ... },
-                { ... },
+                {
+                    "type": "Workspace",
+                    "items": [{
+                    	"namePattern": "my_workspace_2",
+					            ... }]
+                },
+								{ "type": "Key", ... }
+								{ "type": "Address", ... }
+            ]
+        }
+    }
+}`
+				await code.selectLines`12`
+			}}
+		/>
+
+		<Action
+			do={async () => {
+				await code.update`
+{
+    "type": "script",
+	  ...
+    "run": {
+        "usingWorkspaces": {
+            "type": "loadConfig",
+            "updateId": "Workspace-exercise-1",
+            "layers": [
+                {
+                    "type": "Workspace",
+                    "items": [{
+                    	"namePattern": "my_workspace_2",
+					            ... }]
+                },
+                {
+                    "type": "Key",
+                    "workspaceIds": [
+                        "my_workspace_2"
+                    ],
+                    "items": [{
+                            "namePattern": "my_key_spend",
+                            "kind": "spend",
+                            "accountIndex": 5,
+                            "addressIndex": 0
+                        },
+                        {
+                            "namePattern": "my_key_stake",
+                            "kind": "stake",
+                            "accountIndex": 5,
+                            "addressIndex": 0
+                        }]
+                },
                 { ... }
             ]
         }
     }
 }`
-				await code.selectLines`5`
+				await code.selectLines`16`
 			}}
 		/>
 
-		<!-- <Action do={() => code.selectLines`3`} />
-		<Action do={() => (image2.src = '/src/lib/assets/advanced_2.webp')} />
+		<Action
+			do={async () => {
+				await code.selectLines`12, 18`
+			}}
+		/>
 
-		<Action do={() => code.selectLines`4-10`} />
-		<Action do={() => (image2.src = '/src/lib/assets/advanced_3.webp')} />
+		<Action
+			do={async () => {
+				await code.selectLines`21-25`
+			}}
+		/>
 
-		<Action do={() => (image2.src = '/src/lib/assets/advanced_4.webp')} />
-		<Action do={() => (image2.src = '/src/lib/assets/advanced_5a.webp')} />
-		<Action do={() => (image2.src = '/src/lib/assets/advanced_6a.webp')} />
+		<Action
+			do={async () => {
+				await code.selectLines`26-31`
+			}}
+		/>
 
 		<Action
 			do={async () => {
 				await code.update`
-		{
-			"type": "script",
-			"title": "Pay me 1 tADA",
-			"description": "This....",
-			"run": {
-				"stage1_build_transaction": {
-					"type": "buildTx",
-					"tx": {
-						"outputs": [
-							{
-								"address": "addr_test1qrl...ftdp2f6rqvz02jw",
-								"assets": [
-									{
-										"policyId": "ada",
-										"assetName": "ada",
-										"quantity": "1000000"
-									}
-								]
-							}
-						]
-					}
-				},
-				"stage2_sign_transaction": {...
-				},....
-			`
-				await code.selectLines`6`
+{
+    "type": "script",
+	  ...
+    "run": {
+        "usingWorkspaces": {
+            "type": "loadConfig",
+            "updateId": "Workspace-exercise-1",
+            "layers": [
+                {
+                    "type": "Workspace",
+                    "items": [{ "namePattern": "my_workspace_2",...}]
+                },
+                {
+                    "type": "Key",
+                    "workspaceIds": [
+                        "my_workspace_2"
+                    ],
+                    "items": [
+                        { "namePattern": "my_key_spend", ... },
+                        { "namePattern": "my_key_stake", ... }
+                    ]
+                },
+                {
+                    "type": "Address",
+                    "workspaceIds": [
+                        "my_workspace_2"
+                    ],
+                    "items": [{
+                            "namePattern": "My_Address_1",
+                            "stakePubKeyName": "my_key_spend",
+                            "spendPubKeyName": "my_key_stake"
+                        }]
+                }
+            ]
+        }
+    }
+}`
+				await code.selectLines`11,16,26`
 			}}
 		/>
 
-		<Action do={() => (image2.src = '/src/lib/assets/advanced_7a.webp')} />
+		<Action
+			do={async () => {
+				await code.selectLines`19,30`
+			}}
+		/>
 
 		<Action
 			do={async () => {
-				await code.update`
-		{
-			"type": "script",
-			"title": "Pay me 1 tADA",
-			"description": "This....",
-			"run": {
-				"stage1_build_transaction": {...
-				},
-       			"stage2_sign_transaction": {
-					"type": "signTxs",
-					"namePattern": "Signed Demo Transaction",
-					"detailedPermissions": false,
-					"txs": [
-						"{get('cache.stage1_build_transaction.txHex')}"
-					]
-				}...
-        				`
-				await code.selectLines`8,13`
+				await code.selectLines`20,31`
 			}}
-		/> 
+		/>
 
-		<Action do={() => (image2.src = '/src/lib/assets/advanced_8a.webp')} />
-	-->
+		<Action
+			do={async () => {
+				await code.selectLines`29`
+			}}
+		/>
 	</Slide>
-
-
 </Presentation>

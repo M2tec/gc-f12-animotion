@@ -55,8 +55,8 @@ body {
 /* code block */
 #code {
 	padding: var(--spacing-4) var(--spacing-8);
-	margin: 16px;
-	height: 920px;
+	/* margin: 16px; */
+	height: 1400px;
 	width: 1000px;
 	background-color: rgb(36, 41, 46);
 	border-top: 1px solid oklch(34% 0.02 272);
