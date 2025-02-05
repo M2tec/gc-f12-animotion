@@ -110,24 +110,23 @@
 
     <Action
         do={async () => {
-            await code.update`
-{
-"type": "script",
-"title": "Load a configuration",
-"description": "Loading a Workspace configuration into wallet",
-"run": {
-    "usingWorkspaces": {
-        "type": "loadConfig",
-        "updateId": "Workspace-exercise-2",
-        "layers": [
-            { ... },
-            { ... },
-            { ... }
-        ]
+            await code.update`{
+    "type": "script",
+    "title": "Load a configuration",
+    "description": "Loading a Workspace configuration into wallet",
+    "run": {
+        "usingWorkspaces": {
+            "type": "loadConfig",
+            "updateId": "Workspace-exercise-2",
+            "layers": [
+                { ... },
+                { ... },
+                { ... }
+            ]
+        }
     }
-}
 }`
-            await code.selectLines`8`
+            await code.selectLines`7`
         }}
     />
 
@@ -185,8 +184,7 @@
 
     <Action
         do={async () => {
-            await code2.update`
-{
+            await code2.update`{
     "type": "script",
     ...
     "run": {
@@ -199,7 +197,7 @@
                 { "type": "Address", ... }
             ]		
         }
-}
+    }
 }`
             await code2.selectLines`9-11`
         }}
@@ -207,8 +205,7 @@
 
     <Action
         do={async () => {
-            await code2.update`
-{
+            await code2.update`{
     "type": "script",
     ...
     "run": {
@@ -228,7 +225,7 @@
         }
     }
 }`
-            await code2.selectLines`11`
+            await code2.selectLines`10`
         }}
     />
 
@@ -282,55 +279,54 @@
 
     <Action
         do={async () => {
-            await code2.selectLines`21-25`
+            await code2.selectLines`20-23`
         }}
     />
 
     <Action
         do={async () => {
-            await code2.selectLines`26-31`
+            await code2.selectLines`26-29`
         }}
     />
 
     <Action
         do={async () => {
-            await code2.update`
-{
-"type": "script",
-  ...
-"run": {
-    "usingWorkspaces": {
-        "type": "loadConfig",
-        "updateId": "Workspace-exercise-1",
-        "layers": [
-            {
-                "type": "Workspace",
-                "items": [{ "namePattern": "my_workspace_2",...}]
-            },
-            {
-                "type": "Key",
-                "workspaceIds": [
-                    "my_workspace_2"
-                ],
-                "items": [
-                    { "namePattern": "my_key_spend", ... },
-                    { "namePattern": "my_key_stake", ... }
-                ]
-            },
-            {
-                "type": "Address",
-                "workspaceIds": [
-                    "my_workspace_2"
-                ],
-                "items": [{
-                    "namePattern": "My_Address_1",
-                    "stakePubKeyName": "my_key_spend",
-                    "spendPubKeyName": "my_key_stake"
-                    }]
-            }
-        ]
+            await code2.update`{
+    "type": "script",
+    ...
+    "run": {
+        "usingWorkspaces": {
+            "type": "loadConfig",
+            "updateId": "Workspace-exercise-1",
+            "layers": [
+                {
+                    "type": "Workspace",
+                    "items": [{ "namePattern": "my_workspace_2",...}]
+                },
+                {
+                    "type": "Key",
+                    "workspaceIds": [
+                        "my_workspace_2"
+                    ],
+                    "items": [
+                        { "namePattern": "my_key_spend", ... },
+                        { "namePattern": "my_key_stake", ... }
+                    ]
+                },
+                {
+                    "type": "Address",
+                    "workspaceIds": [
+                        "my_workspace_2"
+                    ],
+                    "items": [{
+                        "namePattern": "My_Address_1",
+                        "stakePubKeyName": "my_key_spend",
+                        "spendPubKeyName": "my_key_stake"
+                        }]
+                }
+            ]
+        }
     }
-}
 }`
             await code2.selectLines`11,16,26`
         }}
@@ -376,8 +372,7 @@
 
         <Action
             do={async () => {
-                await code3.update`
-{
+                await code3.update`{
     "type": "script",
     "title": "Multisig 2 of 2 Workspace",
     "description": "Alice and Bob must sign",
@@ -396,21 +391,20 @@
     }
 }
 `
-                await code3.selectLines`7-13`
+                await code3.selectLines`6-13`
             }}
         />
 
         <Action
             do={async () => {
-                await code3.update`
-{
+                await code3.update`{
     "type": "script",
     "title": "Multisig 2 of 2 Workspace",
     "description": "Alice and Bob must sign",
     "args":{ "Alice":{ "spendKeyHashHex": "ccc8ff3028155a487228a6e0ecf02edcd3cd42a02ab4eee947766227",
                        "stakeKeyHashHex": "9957781a7c45357f96120ee73f80bfaa98adae68ce6ae80a3014d175"},
-               "Bob":{ "spendKeyHashHex": "0146e2d57bb52dc888f15cf17fef414e4ab1b71a36fdf8cd199bc2c2",
-                       "stakeKeyHashHex": "80ca5adf47eb9ff0f4408bd0e3927fc39e1472d460441d4cdb9d2d28" }},
+             "Bob":  { "spendKeyHashHex": "0146e2d57bb52dc888f15cf17fef414e4ab1b71a36fdf8cd199bc2c2",
+                       "stakeKeyHashHex": "80ca5adf47eb9ff0f4408bd0e3927fc39e1472d460441d4cdb9d2d28"}},
     "run": {
         "walletSetup": {
             "type": "loadConfig",
@@ -439,15 +433,14 @@
 
         <Action
             do={async () => {
-                await code3.update`
-{
+                await code3.update`{
     "type": "script",
     "title": "Multisig 2 of 2 Workspace",
     "description": "Alice and Bob must sign",
     "args":{ "Alice":{ "spendKeyHashHex": "ccc8ff3028155a487228a6e0ecf02edcd3cd42a02ab4eee947766227",
                        "stakeKeyHashHex": "9957781a7c45357f96120ee73f80bfaa98adae68ce6ae80a3014d175"},
-            "Bob":{ "spendKeyHashHex": "0146e2d57bb52dc888f15cf17fef414e4ab1b71a36fdf8cd199bc2c2",
-                    "stakeKeyHashHex": "80ca5adf47eb9ff0f4408bd0e3927fc39e1472d460441d4cdb9d2d28" }},
+             "Bob":  { "spendKeyHashHex": "0146e2d57bb52dc888f15cf17fef414e4ab1b71a36fdf8cd199bc2c2",
+                       "stakeKeyHashHex": "80ca5adf47eb9ff0f4408bd0e3927fc39e1472d460441d4cdb9d2d28"}},
     "run": {
         "walletSetup": {
             "type": "loadConfig",
@@ -478,7 +471,7 @@
         }
 }
 `
-                await code3.selectLines`17-34`
+                await code3.selectLines`17-32`
             }}
         />
 
@@ -491,15 +484,14 @@
 
         <Action
             do={async () => {
-                await code3.update`
-{
+                await code3.update`{
     "type": "script",
     "title": "Multisig 2 of 2 Workspace",
     "description": "Alice and Bob must sign",
     "args":{ "Alice":{ "spendKeyHashHex": "ccc8ff3028155a487228a6e0ecf02edcd3cd42a02ab4eee947766227",
                        "stakeKeyHashHex": "9957781a7c45357f96120ee73f80bfaa98adae68ce6ae80a3014d175"},
-             "Bob":{   "spendKeyHashHex": "0146e2d57bb52dc888f15cf17fef414e4ab1b71a36fdf8cd199bc2c2",
-                       "stakeKeyHashHex": "80ca5adf47eb9ff0f4408bd0e3927fc39e1472d460441d4cdb9d2d28" }},
+             "Bob":  { "spendKeyHashHex": "0146e2d57bb52dc888f15cf17fef414e4ab1b71a36fdf8cd199bc2c2",
+                       "stakeKeyHashHex": "80ca5adf47eb9ff0f4408bd0e3927fc39e1472d460441d4cdb9d2d28"}},
     "run": {
     "walletSetup": {
         "type": "loadConfig",
