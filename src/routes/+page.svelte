@@ -22,6 +22,7 @@
     let code13: Code
     let code14: Code
     let code15: Code
+    let code16: Code
 </script>
 
 <Presentation options={{ history: true, transition: 'slide', controls: false, progress: false }}>
@@ -334,7 +335,7 @@ $ npm create vite@latest gc-unimatrix-dao -- --template react
 
 	<Slide class="h-full place-content-center place-items-center">
 		<!-- Package.json -->
-		<p class="text-4xl font-bold drop-shadow-sm">Package.json</p>
+		<p class="text-4xl font-bold drop-shadow-sm">Libraries and versions</p>
 		<p>&zwnj;</p>
 
 		<div id="code-single" style="font-size: 45px;">
@@ -343,7 +344,8 @@ $ npm create vite@latest gc-unimatrix-dao -- --template react
 
 		<Action
 			do={async () => {
-				await code5.update`{
+				await code5.update`package.json
+{
 	"name": "gc-unimatrix-dao",
 	"private": true,
 	"version": "0.0.0",
@@ -383,7 +385,7 @@ $ npm create vite@latest gc-unimatrix-dao -- --template react
 
 	<Slide class="h-full place-content-center place-items-center">
 		<!-- vite.config.js -->
-		<p class="text-4xl font-bold drop-shadow-sm">vite.config.js</p>
+		<p class="text-4xl font-bold drop-shadow-sm">Vite configuration</p>
 		<p>&zwnj;</p>
 
 		<div id="code-single" style="font-size: 42px;">
@@ -392,7 +394,7 @@ $ npm create vite@latest gc-unimatrix-dao -- --template react
 
 		<Action
 			do={async () => {
-				await code6.update`
+				await code6.update`vite.config.js
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import wasm from "vite-plugin-wasm";
@@ -433,7 +435,7 @@ export default defineConfig({
 
 	<Slide class="h-full place-content-center place-items-center">
 		<!-- npm install -->
-		<p class="text-4xl font-bold drop-shadow-sm">Install npm</p>
+		<p class="text-4xl font-bold drop-shadow-sm">Install libraries</p>
 		<p>&zwnj;</p>
 
 		<div id="code-single" style="font-size: 42px;">
@@ -459,7 +461,8 @@ $ npm install`
 
 		<Action
 			do={async () => {
-				await code8.update`<!doctype html>
+				await code8.update`index.html:
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -487,13 +490,13 @@ $ npm install`
   
   </body>
 </html>`
-await code8.selectLines`9-16`
+await code8.selectLines`10-17`
 			}}
 		/>
 
 		<Action
 			do={async () => {
-				await code8.selectLines`18,19,25`
+				await code8.selectLines`19,20,26`
 
 			}}
 		/>
@@ -502,8 +505,8 @@ await code8.selectLines`9-16`
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
-		<!-- Building examples -->
-		<p class="text-4xl font-bold drop-shadow-sm">src/pages/Home.jsx</p>
+		<!-- HOME -->
+		<p class="text-4xl font-bold drop-shadow-sm">Home</p>
 		<p>&zwnj;</p>
 
 		<div id="code-single" style="font-size: 58px;">
@@ -512,7 +515,8 @@ await code8.selectLines`9-16`
 
 		<Action
 			do={async () => {
-				await code9.update`import { useEffect, useState } from 'react'
+				await code9.update`src/pages/Home.jsx:
+import { useEffect, useState } from 'react'
 ...
 const Home = () => {
   const [host, setHost] = useState("")
@@ -536,10 +540,9 @@ const Home = () => {
   async function getWalletData() { ... }
   return ( ... )
 };
-
 export default Home;
 `
-await code9.selectLines`6, 9-19`
+await code9.selectLines`6, 10-19`
 			}}
 
 		/>
@@ -547,7 +550,8 @@ await code9.selectLines`6, 9-19`
 
 		<Action
 			do={async () => {
-				await code9.update`import { useEffect, useState } from 'react'
+				await code9.update`src/pages/Home.jsx:
+import { useEffect, useState } from 'react'
 ...
 
 const Home = () => {
@@ -566,32 +570,88 @@ const Home = () => {
 
   return ( ... )
 };
-
 export default Home;
 `
-await code9.selectLines`6, 12, 13`
+await code9.selectLines`7, 13, 14`
 			}}
 		/>
-
-
 
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
-		<!-- Building examples -->
-		<p class="text-4xl font-bold drop-shadow-sm">src/pages/Data.jsx</p>
+		<!-- Page routing -->
+		<p class="text-4xl font-bold drop-shadow-sm">Page routing</p>
+		<p>&zwnj;</p>
+		<div class="flex flex-row gap-8">
+		<div id="code-single" style="font-size: 69px;">
+			<Code bind:this={code13} lang="javascript" theme="github-dark" code={``} />
+		</div>
+        <div id="code-single" style="font-size: 62px;">
+			<Code bind:this={code14} lang="bash" theme="github-dark" code={``} />
+		</div>
+    </div>
+		<Action
+			do={async () => {
+				await code13.update`src/App.jsx:
+import './App.css'
+import { Route, 
+         createBrowserRouter, createRoutesFromElements, 
+         RouterProvider } from 'react-router-dom';
+import Home from "./pages/Home";
+import Data from "./pages/Data";
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route>
+      <Route index element={<Home />} />
+      <Route path="return-data" element={<Data />} />
+    </Route>
+  )
+)
+
+function App({routes}) {
+  return ( <RouterProvider router={router}/> )
+}
+export default App
+`
+await code13.selectLines`3-5, 19`
+await code14.update`http://localhost:5174/return-data?d=1-H4sIAAAAA...1_ky3-sDAAA`
+			}}
+
+		/>
+		
+		<Action
+			do={async () => {
+				await code13.selectLines`7, 13`
+                await code14.update`http://localhost:5174/return-data?d=1-H4sIAAAAA...1_ky3-sDAAA
+                
+host string:        http://localhost:5174
+routing path:       /return-data
+search parameter:   ?d=
+GCscript data:      1-H4sIAAAAA...1_ky3-sDAAA
+                `
+			}}
+		/>
+
+	</Slide>
+
+
+	<Slide class="h-full place-content-center place-items-center">
+		<!-- Receiving data -->
+		<p class="text-4xl font-bold drop-shadow-sm">Receiving data</p>
 		<p>&zwnj;</p>
 		<div class="flex flex-row gap-8">
 		<div id="code-single" style="font-size: 62px;">
 			<Code bind:this={code11} lang="javascript" theme="github-dark" code={``} />
 		</div>
         <div id="code-single" style="font-size: 62px;">
-			<Code bind:this={code12} lang="javascript" theme="github-dark" code={``} />
+			<Code bind:this={code12} lang="bash" theme="github-dark" code={``} />
 		</div>
     </div>
 		<Action
 			do={async () => {
-				await code11.update`import { useSearchParams } from 'react-router-dom'
+				await code11.update`src/pages/Data.jsx:
+import { useSearchParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
 const Data = () => {
@@ -613,81 +673,203 @@ const Data = () => {
   window.close()
   return (<h1>Results</h1>)
 };
-
 export default Data;
 `
-await code11.selectLines`5, 16`
+await code11.selectLines`6, 17`
+await code12.update`http://localhost:5174/return-data?d=1-H4sIAAAAA...1_ky3-sDAAA
+                
+host string:        http://localhost:5174
+routing path:       /return-data
+search parameter:   ?d=
+GCscript data:      1-H4sIAAAAA...1_ky3-sDAAA`
+await code12.selectLines`5`
 			}}
 
 		/>
 
-		<Action
-			do={async () => {
-				await code12.update`http://localhost:5174/return-data?d=1-H4sIAAAAA...1_ky3-sDAAA
-`
-
-			}}
-		/>
-
-
-        
 	</Slide>
 
 
 	<Slide class="h-full place-content-center place-items-center">
-		<!-- Building examples -->
-		<p class="text-4xl font-bold drop-shadow-sm">src/pages/Data.jsx</p>
+		<!-- Receiving data -->
+		<p class="text-4xl font-bold drop-shadow-sm">Unimatrix listener</p>
 		<p>&zwnj;</p>
-		<div class="flex flex-row gap-8">
-		<div id="code-single" style="font-size: 62px;">
-			<Code bind:this={code11} lang="javascript" theme="github-dark" code={``} />
+		<div id="code-single" style="font-size: 55px;">
+			<Code bind:this={code15} lang="javascript" theme="github-dark" code={``} />
 		</div>
-        <div id="code-single" style="font-size: 62px;">
-			<Code bind:this={code12} lang="javascript" theme="github-dark" code={``} />
-		</div>
-    </div>
+
 		<Action
 			do={async () => {
-				await code11.update`import { useSearchParams } from 'react-router-dom'
+				await code15.update`src/services/UnimatrixListener.jsx:
+import { useEffect } from 'react';
+...
+export const UnimatrixListener = ({
+    gun,
+    unimatrixId,
+    pubKey }) => {
+
+    const params = {
+        CSL: CardanoWasm(),
+        db: gun,
+        dltTag: "cardano",
+        networkTag: "preprod",
+        id: unimatrixId,
+        subPath: ["signTxs"] }
+
+    useEffect(() => {
+        (async () => {
+            CardanoSync.onTxHashes({ ... });
+        })();
+    }, [unimatrixId]);
+    return null;
+}
+export default UnimatrixListener;
+`
+await code15.selectLines`5-7`
+
+			}}
+		/>
+
+        <Action
+        do={async () => {
+           
+await code15.selectLines`10-15`
+
+        }}
+
+    />
+    <Action
+    do={async () => {
+       
+await code15.selectLines`19`
+
+    }}
+/>
+
+<Action
+do={async () => {
+    await code15.update`src/services/UnimatrixListener.jsx:
+import { useEffect } from 'react';
+...
+export const UnimatrixListener = ({ gun, unimatrixId, pubKey }) => {
+    const params = { ... }
+
+    useEffect(() => {
+        (async () => {
+            CardanoSync.onTxHashes({
+                ...params,
+                cb: async ({ txHashes, 
+                             validationError, 
+                             userError, 
+                             timeoutError, 
+                             store, 
+                             node, 
+                             stop }) => {
+                ... })
+        })();
+    }, [unimatrixId]);
+    return null;
+
+    }
+export default UnimatrixListener;
+`
+await code15.selectLines`9-18`
+
+}}
+/>
+
+<Action
+do={async () => {
+    await code15.update`src/services/UnimatrixListener.jsx:
+import { useEffect } from 'react';
+...
+export const UnimatrixListener = ({ gun, unimatrixId, pubKey }) => {
+    const params = { ... }
+
+    useEffect(() => {
+        (async () => {
+            CardanoSync.onTxHashes({ ... }) => {
+
+                txHashes.forEach(txHash => {
+                    CardanoSync.getTxHex({ ...params, txHash })
+                        .then(({ txHex }) => { 
+                            console.log("txHex", { txHex }) });
+
+                    let vkHash = pubKey;
+                    CardanoSync.getVkWitnessHex({ ...params, txHash, vkHash })
+                        .then(({ vkWitnessHex }) => { 
+                            console.log("witness", vkWitnessHex) })
+                });
+            })
+        })();
+    }, [unimatrixId]);
+    return null;
+    }
+export default UnimatrixListener;
+`
+await code15.selectLines`11-20`
+
+}}
+/>
+
+
+	</Slide>
+
+	<Slide class="h-full place-content-center place-items-center">
+		<!-- HOME -->
+		<p class="text-4xl font-bold drop-shadow-sm">Add the listener component</p>
+		<p>&zwnj;</p>
+
+		<div id="code-single" style="font-size: 58px;">
+			<Code bind:this={code16} lang="javascript" theme="github-dark" code={``} />
+		</div>
+
+		<Action
+			do={async () => {
+				await code16.update`src/pages/Home.jsx:
 import { useEffect, useState } from 'react'
+import Gun from 'gun';
+import UnimatrixListener from '../services/UnimatrixListener';
 
-const Data = () => {
-  const [searchParams, setSearchParams] = useSearchParams();
-  const [resultObj, setResultObj] = useState({});
+let peers = ["https://ar01.gamechanger.finance:2083/unimatrix/gun"]
 
-  const gc = window.gc;
+const Home = () => {
 
-  async function decodeActionUrl(returnData) {
-    const mydata = await gc.encodings.msg.decoder(returnData);
-    setResultObj(mydata);
-  }
+  const gun = new Gun({ peers });
+  let unimatrixId = "multisig_1234"
+  let pubKey = "ded983764fdb27ff993ce0257e64e20cba99348ad3721a59e8c62819"
 
-  useEffect(() => {
-    let returnData = searchParams.get("d");
-    decodeActionUrl(returnData);
-  }, []);
-
-  window.close()
-  return (<h1>Results</h1>)
+  return (
+    <>
+    <h1>Home</h1>
+    
+    <UnimatrixListener {...{
+        gun,
+        unimatrixId,
+        pubKey }} />
+    </>
+  )
 };
 
-export default Data;
 `
-await code11.selectLines`5, 16`
+await code16.selectLines`4, 18-22`
 			}}
-
 		/>
 
 		<Action
 			do={async () => {
-				await code12.update`http://localhost:5174/return-data?d=1-H4sIAAAAA...1_ky3-sDAAA
-`
-
+			
+await code16.selectLines`6, 10-12`
 			}}
 		/>
 
 
-        
+
+	</Slide>
+
+
+	<Slide class="h-full place-content-center place-items-center">
+		<img style="height: 900px;" src="/assets/workshop_1.svg" alt="Welcome" />
 	</Slide>
 
 </Presentation>
