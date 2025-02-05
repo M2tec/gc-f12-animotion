@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { npm_config_cache } from "$env/static/private"
-
 	import { Presentation, Slide, Code, Transition, Action } from '@animotion/core'
 	import { tween } from '@animotion/motion'
 
@@ -18,7 +16,12 @@
 	let code7: Code
 	let code8: Code
 	let code9: Code
-
+    let code10: Code
+    let code11: Code
+    let code12: Code
+    let code13: Code
+    let code14: Code
+    let code15: Code
 </script>
 
 <Presentation options={{ history: true, transition: 'slide', controls: false, progress: false }}>
@@ -180,7 +183,7 @@
         }
     }
 }`
-				await code.selectLines`11-14`
+				await code4.selectLines`11-14`
 			}}
 		/>
 	</Slide>
@@ -315,12 +318,12 @@ npm run dev
 		<p>&zwnj;</p>
 
 		<div id="code-single" style="font-size: 75px;">
-			<Code bind:this={code4} lang="bash" theme="github-dark" code={``} />
+			<Code bind:this={code10} lang="bash" theme="github-dark" code={``} />
 		</div>
 
 		<Action
 			do={async () => {
-				await code4.update`
+				await code10.update`
 $ nvm use v18.20.4
 
 $ npm create vite@latest gc-unimatrix-dao -- --template react
@@ -429,7 +432,7 @@ export default defineConfig({
 	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
-		<!-- Building examples -->
+		<!-- npm install -->
 		<p class="text-4xl font-bold drop-shadow-sm">Install npm</p>
 		<p>&zwnj;</p>
 
@@ -447,50 +450,244 @@ $ npm install`
 
 	<Slide class="h-full place-content-center place-items-center">
 		<!-- Building examples -->
-		<p class="text-4xl font-bold drop-shadow-sm">nfig.js</p>
+		<p class="text-4xl font-bold drop-shadow-sm">index.html</p>
 		<p>&zwnj;</p>
 
-		<div id="code-single" style="font-size: 42px;">
+		<div id="code-single" style="font-size: 49px;">
 			<Code bind:this={code8} lang="bash" theme="github-dark" code={``} />
 		</div>
 
 		<Action
 			do={async () => {
-				await code8.update`
-$ npm install`
-			}}
-		/>
-	</Slide>
-
-	<Slide class="h-full place-content-center place-items-center">
-		<!-- Building examples -->
-		<p class="text-4xl font-bold drop-shadow-sm">vite.config.js</p>
-		<p>&zwnj;</p>
-
-		<div id="code-single" style="font-size: 42px;">
-			<Code bind:this={code9} lang="html" theme="github-dark" code={``} />
-		</div>
-
-		<Action
-			do={async () => {
-				await code9.update`
-        <!doctype html>
+				await code8.update`<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOA Unimatrix</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@gamechanger-finance/gc/dist/browser.min.js"></script>
-  </head>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+          rel="stylesheet" 
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
+          crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
+            crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@gamechanger-finance/gc/dist/browser.min.js">
+    </script>
+  
+    </head>
   <body>
     <div id="root"></div>
+  
     <script type="module" src="/src/main.jsx"></script>
+  
   </body>
 </html>`
+await code8.selectLines`9-16`
 			}}
 		/>
+
+		<Action
+			do={async () => {
+				await code8.selectLines`18,19,25`
+
+			}}
+		/>
+
+
 	</Slide>
+
+	<Slide class="h-full place-content-center place-items-center">
+		<!-- Building examples -->
+		<p class="text-4xl font-bold drop-shadow-sm">src/pages/Home.jsx</p>
+		<p>&zwnj;</p>
+
+		<div id="code-single" style="font-size: 58px;">
+			<Code bind:this={code9} lang="javascript" theme="github-dark" code={``} />
+		</div>
+
+		<Action
+			do={async () => {
+				await code9.update`import { useEffect, useState } from 'react'
+...
+const Home = () => {
+  const [host, setHost] = useState("")
+
+  const gc = window.gc;
+
+  async function handleGC(gcscript) {
+
+    let url = await gc.encode.url({
+      input: JSON.stringify(gcscript), 
+      apiVersion: '2', //APIV2
+      network: 'preprod', // mainnet or preprod
+      encoding: 'gzip' 
+    });
+
+    window.open(url, '_blank', 
+    'location=yes,height=700,width=520,scrollbars=yes,status=yes');
+  }
+
+  useEffect(() => { ... }, []);
+  async function getWalletData() { ... }
+  return ( ... )
+};
+
+export default Home;
+`
+await code9.selectLines`6, 9-19`
+			}}
+
+		/>
+
+
+		<Action
+			do={async () => {
+				await code9.update`import { useEffect, useState } from 'react'
+...
+
+const Home = () => {
+
+  const [host, setHost] = useState("")
+
+  const gc = window.gc;
+  async function handleGC(gcscript) { ... }
+
+  useEffect(() => {
+    let myHostname = location.protocol + '//' + location.host
+    setHost(myHostname);
+  }, []);
+
+  async function getWalletData() { ... }
+
+  return ( ... )
+};
+
+export default Home;
+`
+await code9.selectLines`6, 12, 13`
+			}}
+		/>
+
+
+
+	</Slide>
+
+	<Slide class="h-full place-content-center place-items-center">
+		<!-- Building examples -->
+		<p class="text-4xl font-bold drop-shadow-sm">src/pages/Data.jsx</p>
+		<p>&zwnj;</p>
+		<div class="flex flex-row gap-8">
+		<div id="code-single" style="font-size: 62px;">
+			<Code bind:this={code11} lang="javascript" theme="github-dark" code={``} />
+		</div>
+        <div id="code-single" style="font-size: 62px;">
+			<Code bind:this={code12} lang="javascript" theme="github-dark" code={``} />
+		</div>
+    </div>
+		<Action
+			do={async () => {
+				await code11.update`import { useSearchParams } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+
+const Data = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [resultObj, setResultObj] = useState({});
+
+  const gc = window.gc;
+
+  async function decodeActionUrl(returnData) {
+    const mydata = await gc.encodings.msg.decoder(returnData);
+    setResultObj(mydata);
+  }
+
+  useEffect(() => {
+    let returnData = searchParams.get("d");
+    decodeActionUrl(returnData);
+  }, []);
+
+  window.close()
+  return (<h1>Results</h1>)
+};
+
+export default Data;
+`
+await code11.selectLines`5, 16`
+			}}
+
+		/>
+
+		<Action
+			do={async () => {
+				await code12.update`http://localhost:5174/return-data?d=1-H4sIAAAAA...1_ky3-sDAAA
+`
+
+			}}
+		/>
+
+
+        
+	</Slide>
+
+
+	<Slide class="h-full place-content-center place-items-center">
+		<!-- Building examples -->
+		<p class="text-4xl font-bold drop-shadow-sm">src/pages/Data.jsx</p>
+		<p>&zwnj;</p>
+		<div class="flex flex-row gap-8">
+		<div id="code-single" style="font-size: 62px;">
+			<Code bind:this={code11} lang="javascript" theme="github-dark" code={``} />
+		</div>
+        <div id="code-single" style="font-size: 62px;">
+			<Code bind:this={code12} lang="javascript" theme="github-dark" code={``} />
+		</div>
+    </div>
+		<Action
+			do={async () => {
+				await code11.update`import { useSearchParams } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+
+const Data = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [resultObj, setResultObj] = useState({});
+
+  const gc = window.gc;
+
+  async function decodeActionUrl(returnData) {
+    const mydata = await gc.encodings.msg.decoder(returnData);
+    setResultObj(mydata);
+  }
+
+  useEffect(() => {
+    let returnData = searchParams.get("d");
+    decodeActionUrl(returnData);
+  }, []);
+
+  window.close()
+  return (<h1>Results</h1>)
+};
+
+export default Data;
+`
+await code11.selectLines`5, 16`
+			}}
+
+		/>
+
+		<Action
+			do={async () => {
+				await code12.update`http://localhost:5174/return-data?d=1-H4sIAAAAA...1_ky3-sDAAA
+`
+
+			}}
+		/>
+
+
+        
+	</Slide>
+
 </Presentation>
