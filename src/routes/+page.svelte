@@ -18,9 +18,6 @@
 </script>
 
 <Presentation options={{ history: true, transition: 'slide', controls: false, progress: false }}>
-    <Slide class="h-full place-content-center place-items-center">
-        <img style="height: 900px;" src="/assets/workshop_1.svg" alt="Welcome" />
-    </Slide>
 
     <!-- <Slide class="h-full place-content-center place-items-center">
         <video width="1920" height="1080" autoplay controls>
@@ -30,13 +27,16 @@
         </video>
     </Slide> -->
 
+    <Slide class="h-full place-content-center place-items-center">
+        <img style="height: 900px;" src="/assets/workshop_1.svg" alt="Welcome" />
+    </Slide>
 
 <Slide class="h-full place-content-center place-items-center">
     <p class="text-4xl font-bold drop-shadow-sm">Module 201</p>
     <p>&zwnj;</p>
 
     <Transition>
-        <p class="text-base font-bold drop-shadow-sm">Unimatrix shared wallets</p>
+        <p class="text-base font-bold drop-shadow-sm">Workspaces and mutlisig wallet</p>
     </Transition>
 </Slide>
 
@@ -70,8 +70,8 @@
     </Transition>
 </Slide>
 
-<Slide class="h-full place-content-center place-items-center"> <!-- 202.1  -->
-    <p class="text-4xl font-bold drop-shadow-sm">202.1</p>
+<Slide class="h-full place-content-center place-items-center"> <!-- 201.1  -->
+    <p class="text-4xl font-bold drop-shadow-sm">201.1</p>
     <p>&zwnj;</p>
 
     <Transition>
@@ -157,8 +157,8 @@
 
 </Slide>
 
-<Slide class="h-full place-content-center place-items-center"> <!-- 202.2  -->
-    <p class="text-4xl font-bold drop-shadow-sm">202.2</p>
+<Slide class="h-full place-content-center place-items-center"> <!-- 201.2  -->
+    <p class="text-4xl font-bold drop-shadow-sm">201.2</p>
     <p>&zwnj;</p>
 
     <Transition>
@@ -351,8 +351,8 @@
     />
 </Slide>
 
-<Slide class="h-full place-content-center place-items-center"> <!-- 202.3  -->
-    <p class="text-4xl font-bold drop-shadow-sm">202.3</p>
+<Slide class="h-full place-content-center place-items-center"> <!-- 201.3  -->
+    <p class="text-4xl font-bold drop-shadow-sm">201.3</p>
     <p>&zwnj;</p>
 
     <Transition>
