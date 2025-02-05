@@ -63,6 +63,16 @@ body {
 	border-radius: var(--radius-lg);
 }
 
+#code-single {
+	padding: var(--spacing-4) var(--spacing-8);
+	/* margin: 16px; */
+	height: 1400px;
+	width: 1600px;
+	background-color: rgb(36, 41, 46);
+	border-top: 1px solid oklch(34% 0.02 272);
+	border-radius: var(--radius-lg);
+}
+
 /* view transitions */
 html {
 	view-transition-name: none;
