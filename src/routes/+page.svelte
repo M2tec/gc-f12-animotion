@@ -19,7 +19,7 @@
 
 <Presentation options={{ history: true, transition: 'slide', controls: false, progress: false }}>
     <Slide class="h-full place-content-center place-items-center">
-        <img style="height: 900px;" src="/src/lib/assets/workshop_1.png" alt="Welcome" />
+        <img style="height: 900px;" src="assets/workshop_1.png" alt="Welcome" />
     </Slide>
 
     <!-- <Slide class="h-full place-content-center place-items-center">
