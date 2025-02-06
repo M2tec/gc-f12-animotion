@@ -23,6 +23,12 @@
     let code14: Code
     let code15: Code
     let code16: Code
+	let code17: Code
+	let code18: Code
+	let code19: Code
+	let code20: Code
+	let code21: Code
+	let code22: Code
 </script>
 
 <Presentation options={{ history: true, transition: 'slide', controls: false, progress: false }}>
@@ -867,9 +873,238 @@ await code16.selectLines`6, 10-12`
 
 	</Slide>
 
+	<Slide class="h-full place-content-center place-items-center">
+		<!-- 301.1  -->
+		<p class="text-4xl font-bold drop-shadow-sm">301.5</p>
+		<p>&zwnj;</p>
+
+		<Transition>
+			<p class="pb-5 text-base font-bold drop-shadow-sm">Building a full dApp</p>
+		</Transition>
+	</Slide>
 
 	<Slide class="h-full place-content-center place-items-center">
-		<img style="height: 900px;" src="/assets/workshop_1.svg" alt="Welcome" />
+		<img style="height: 1100px;" src="/assets/dao_overview.png" alt="Welcome" />
 	</Slide>
+
+	<Slide class="h-full place-content-center place-items-center">
+		<!-- Receiving data -->
+		<p class="text-4xl font-bold drop-shadow-sm">Getting state</p>
+		<p>&zwnj;</p>
+		<div id="code-single" style="font-size: 55px;">
+			<Code bind:this={code17} lang="javascript" theme="github-dark" code={``} />
+		</div>
+
+<Action
+do={async () => {
+    await code17.update`src/pages/Home.jsx:
+const Home = () => {
+
+  const [daoInfo, setDaoInfo] = useState({})
+  
+	useEffect(() => {
+		let getDaoInfo = JSON.parse(localStorage.getItem("daoInfo_0"));
+		
+		if (getDaoInfo === null) {
+		  getDaoInfo = { name: "", address: "" }
+		}
+		
+		setDaoInfo({ ...daoInfo, ...getDaoInfo })
+	}, []);
+	
+	return (<></>)
+};
+
+export default Home;
+`
+await code17.selectLines`7,13`
+
+}}
+/>
+
+	</Slide>
+
+	<Slide class="h-full place-content-center place-items-center">
+		<img style="height: 700px;" src="/assets/change_name.png" alt="Welcome" />
+	</Slide>
+
+<Slide class="h-full place-content-center place-items-center">
+	<!-- Receiving data -->
+	<p class="text-4xl font-bold drop-shadow-sm">Saving state</p>
+	<p>&zwnj;</p>
+	<div id="code-single" style="font-size: 65px;">
+		<Code bind:this={code18} lang="javascript" theme="github-dark" code={``} />
+	</div>
+
+<Action
+do={async () => {
+await code18.update`src/pages/Home.jsx:
+const Home = () => {
+
+	async function handleDaoNameChange(event) {
+	
+	  console.log("Change name");
+	
+	  let changedDaoInfo = { ...daoInfo }
+	
+	  changedDaoInfo.name = event.target.value
+	  setDaoInfo(changedDaoInfo)
+	
+	  localStorage.setItem("daoInfo_0", JSON.stringify(changedDaoInfo))
+	
+	}
+
+return (
+		<input type="text" 
+					 onChange={handleDaoNameChange} 
+					 defaultValue={daoInfo.name} />
+)};
+
+export default Home;	
+`
+await code18.selectLines`4,19,10`
+
+}}
+/>
+
+<Action
+do={async () => {
+await code18.selectLines`8,13,20`
+
+}}
+/>
+
+
+</Slide>
+
+<Slide class="h-full place-content-center place-items-center">
+	<img style="height: 1100px;" src="/assets/get_pubkey.png" alt="Welcome" />
+</Slide>
+
+
+<Slide class="h-full place-content-center place-items-center">
+	<!-- Receiving data -->
+	<p class="text-4xl font-bold drop-shadow-sm">Saving state</p>
+	<p>&zwnj;</p>
+
+	<div class="flex flex-row gap-8">
+	<div id="code" style="font-size: 55px;">
+		<Code bind:this={code19} lang="javascript" theme="github-dark" code={``} />
+	</div>
+	<div id="code" style="font-size: 55px;">
+		<Code bind:this={code20} lang="javascript" theme="github-dark" code={``} />
+	</div>
+    </div>
+<Action
+do={async () => {
+await code19.update`src/pages/Data.jsx:
+const Data = () => {
+		...
+    useEffect(() => {
+		    ...
+        localStorage.setItem("daoInfo_0", 
+                             JSON.stringify(daoInfo))
+    }, [resultObj])
+};
+export default Data;	
+`
+await code19.selectLines`6,7`
+await code20.update`src/pages/Home.jsx:
+const Home = () => {
+
+  const [daoInfo, setDaoInfo] = useState({})
+  
+	useEffect(() => {
+	
+    window.addEventListener('storage', () => {     
+
+      setDaoInfo(JSON.parse(
+            localStorage.getItem('daoInfo_0')) || {})
+    });
+    
+	}, []);
+	
+	return (<></>)
+};
+
+export default Home;
+`
+await code20.selectLines`8`
+
+
+}}
+
+/>
+</Slide>
+
+
+<Slide class="h-full place-content-center place-items-center">
+	<!-- Receiving data -->
+	<p class="text-4xl font-bold drop-shadow-sm">Event trick</p>
+	<p>&zwnj;</p>
+	<div id="code-single" style="font-size: 65px;">
+		<Code bind:this={code21} lang="javascript" theme="github-dark" code={``} />
+	</div>
+
+<Action
+do={async () => {
+await code21.update`src/services/UnimatrixListener.jsx:
+localStorage.setItem("transactions_0", JSON.stringify(daoTx))
+window.dispatchEvent(new Event("storage"));
+`
+await code21.selectLines`3`
+
+}}
+/>
+</Slide>
+
+
+<Slide class="h-full place-content-center place-items-center">
+	<!-- Receiving data -->
+	<p class="text-4xl font-bold drop-shadow-sm">Saving state</p>
+	<p>&zwnj;</p>
+	<div id="code-single" style="font-size: 55px;">
+		<Code bind:this={code22} lang="javascript" theme="github-dark" code={``} />
+	</div>
+
+<Action
+do={async () => {
+await code22.update`src/pages/Home.jsx:
+const gcscript =
+{
+  "type": "script",
+  ...
+  "run": {
+    "walletSetup": {
+       ...
+    },
+    
+    "walletSelect": {
+      "type": "setCurrentWorkspace",
+      "workspaceId": daoInfo.name + "_DAO"
+    },
+    "getAddress": {
+      "type": "getAddresses",
+    } 
+    
+  },
+  "returnURLPattern": host + "/return-data?d={result}"
+}
+`
+await code22.selectLines`11,15`
+
+}}
+/>
+</Slide>
+
+<Slide class="h-full place-content-center place-items-center">
+	<img style="height: 700px;" src="/assets/doa_done.png" alt="Welcome" />
+</Slide>
+
+<Slide class="h-full place-content-center place-items-center">
+	<img style="height: 1100px;" src="/assets/create_proposal.png" alt="Welcome" />
+</Slide>
+
+
 
 </Presentation>
