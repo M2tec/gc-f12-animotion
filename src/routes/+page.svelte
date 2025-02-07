@@ -49,7 +49,7 @@
 		<p>&zwnj;</p>
 
 		<Transition>
-			<p class="text-base font-bold drop-shadow-sm">Workspaces and mutlisig wallet</p>
+			<p class="text-base font-bold drop-shadow-sm">Unimatrix</p>
 		</Transition>
 	</Slide>
 
@@ -984,7 +984,7 @@ await code18.selectLines`8,13,20`
 
 <Slide class="h-full place-content-center place-items-center">
 	<!-- Receiving data -->
-	<p class="text-4xl font-bold drop-shadow-sm">Saving state</p>
+	<p class="text-4xl font-bold drop-shadow-sm">Updating home</p>
 	<p>&zwnj;</p>
 
 	<div class="flex flex-row gap-8">
@@ -1061,7 +1061,7 @@ await code21.selectLines`3`
 
 <Slide class="h-full place-content-center place-items-center">
 	<!-- Receiving data -->
-	<p class="text-4xl font-bold drop-shadow-sm">Saving state</p>
+	<p class="text-4xl font-bold drop-shadow-sm">Selecting a new wallet</p>
 	<p>&zwnj;</p>
 	<div id="code-single" style="font-size: 55px;">
 		<Code bind:this={code22} lang="javascript" theme="github-dark" code={``} />
