@@ -36,7 +36,7 @@
     <p>&zwnj;</p>
 
     <Transition>
-        <p class="text-base font-bold drop-shadow-sm">Workspaces and mutlisig wallet</p>
+        <p class="text-base font-bold drop-shadow-sm">Workspaces and multisig wallet</p>
     </Transition>
 </Slide>
 
